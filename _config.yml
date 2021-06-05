@@ -2,10 +2,8 @@
 title: TechBlog by Dhiraj
 email: contact@dhirajsalian.com
 description: >- 
-  TechBlog by Dhiraj aims to bring anything and everything related to 
-  Computer Science to you. We will be adding blogs on range of topics
-  such as Programming, Data Structures & Algorithms, System Design, Design 
-  Patterns, Java, JavaScript, TypeScript, Dart, Spring, Flutter and Angular.
+  Sharing my experiences on designing,
+  developing and deploying quality code.
 baseurl: "/"
 url: "https://blogs.dhirajsalian.com"
 github_username:  dhiraj-salian
