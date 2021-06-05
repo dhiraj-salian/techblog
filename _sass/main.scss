@@ -3,7 +3,9 @@ $secondaryColor: rgba(168,0,111,1);
 $backgroundColor: #0f0e15;
 $surfaceColor: #17151e;
 $onBackgroundColor: #ffffff;
+$onBackgroundColorVariant: #828282;
 $onSurfaceColor: #ffffff;
+$onSurfaceColorVariant: #828282;
 
 @mixin primaryColorBackground {
     background: $primaryColor;
@@ -121,16 +123,16 @@ pre {
 
 /** Wrapper */
 .wrapper {
-  max-width: -webkit-calc(1000px - (30px * 2));
-  max-width: calc(1000px - (30px * 2));
+  max-width: -webkit-calc(800px - (30px * 2));
+  max-width: calc(800px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px;
 }
-@media screen and (max-width: 1200px) { 
+@media screen and (max-width: 1000px) { 
   .wrapper {
-    max-width: -webkit-calc(800px - (30px)); 
+    max-width: -webkit-calc(1000px - (30px)); 
     max-width: calc(800px - (30px));
     padding-right: 15px;
     padding-left: 15px;
@@ -138,12 +140,25 @@ pre {
 }
 
 /** Clearfix */
-.wrapper:after, .footer-col-wrapper:after { content: ""; display: table; clear: both; }
+.wrapper:after, .footer-col-wrapper:after { 
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /** Icons */
-.svg-icon { width: 16px; height: 16px; display: inline-block; fill: #828282; padding-right: 5px; vertical-align: text-top; }
+.svg-icon { 
+  width: 16px; 
+  height: 16px; 
+  display: inline-block; 
+  fill: $onBackgroundColorVariant; 
+  padding-right: 5px; 
+  vertical-align: text-top;
+}
 
-.social-media-list li + li { padding-top: 5px; }
+.social-media-list li + li { 
+  padding-top: 5px;
+}
 
 /** Tables */
 table { margin-bottom: 30px; width: 100%; text-align: left; color: #3f3f3f; border-collapse: collapse; border: 1px solid #e8e8e8; }
@@ -164,38 +179,81 @@ table td { border: 1px solid #e8e8e8; }
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
-  margin-top: 180px;
+  max-width: 400px;
+  margin-top: 140px;
+  margin-bottom: 40px;
 }
-
-.site-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:400px;
-}
-
 
 /** Site footer */
-.site-footer { border-top: 1px solid #e8e8e8; padding: 30px 0; }
+.site-footer {
+  @include primaryColorBorder();
+  border-top: 1px solid;
+  padding: 25px 0;
+}
 
-.footer-heading { font-size: 18px; margin-bottom: 15px; }
+.footer-heading {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
 
-.contact-list, .social-media-list { list-style: none; margin-left: 0; }
+.contact-list, .social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
 
-.footer-col-wrapper { font-size: 15px; color: #828282; margin-left: -15px; }
+.footer-col-wrapper { 
+  font-size: 15px; 
+  color: $onBackgroundColorVariant;
+  margin-left: -15px;
+}
 
-.footer-col { float: left; margin-bottom: 15px; padding-left: 15px; }
+.footer-col {
+  float: left;
+  margin-bottom: 5px; 
+  padding-left: 15px;
+}
 
-.footer-col-1 { width: -webkit-calc(35% - (30px / 2)); width: calc(35% - (30px / 2)); }
+.footer-col-1 { 
+  width: -webkit-calc(35% - (30px / 2)); 
+  width: calc(35% - (30px / 2));
+}
 
-.footer-col-2 { width: -webkit-calc(20% - (30px / 2)); width: calc(20% - (30px / 2)); }
+.footer-col-2 { 
+  width: -webkit-calc(20% - (30px / 2)); 
+  width: calc(20% - (30px / 2)); 
+}
 
-.footer-col-3 { width: -webkit-calc(45% - (30px / 2)); width: calc(45% - (30px / 2)); }
+.footer-col-3 {
+  width: -webkit-calc(45% - (30px / 2));
+  width: calc(45% - (30px / 2));
+}
 
-@media screen and (max-width: 800px) { .footer-col-1, .footer-col-2 { width: -webkit-calc(50% - (30px / 2)); width: calc(50% - (30px / 2)); }
-  .footer-col-3 { width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
-@media screen and (max-width: 600px) { .footer-col { float: none; width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
+@media screen and (max-width: 800px) { 
+  
+  .footer-col-1, .footer-col-2 {
+    width: -webkit-calc(50% - (30px / 2));
+    width: calc(50% - (30px / 2));
+  }
+  
+  .footer-col-3 {
+    width: -webkit-calc(100% - (30px / 2));
+    width: calc(100% - (30px / 2));
+  }
+
+}
+
+@media screen and (max-width: 600px) { 
+  
+  .footer-col {
+    float: none;
+    width: -webkit-calc(100% - (30px / 2));
+    width: calc(100% - (30px / 2));
+  }
+
+}
+
+
+
 /** Page content */
 .page-content { padding: 30px 0; flex: 1; }
 
