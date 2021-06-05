@@ -1,13 +1,15 @@
+$primaryColor: rgba(213,112,34,1);
+$secondaryColor: rgba(168,0,111,1);
 $backgroundColor: #0f0e15;
 $surfaceColor: #17151e;
 $onBackgroundColor: #ffffff;
 $onSurfaceColor: #ffffff;
 
 @mixin primaryColorBackground {
-    background: rgb(213,112,34);
-    background: -moz-linear-gradient(90deg, rgba(213,112,34,1) 0%, rgba(168,0,111,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(213,112,34,1) 0%, rgba(168,0,111,1) 100%);
-    background: linear-gradient(90deg, rgba(213,112,34,1) 0%, rgba(168,0,111,1) 100%);
+    background: $primaryColor;
+    background: -moz-linear-gradient(90deg, $primaryColor 0%, $secondaryColor 100%);
+    background: -webkit-linear-gradient(90deg, $primaryColor 0%, $secondaryColor 100%);
+    background: linear-gradient(90deg, $primaryColor 0%, $secondaryColor 100%);
 }
 
 @mixin primaryColorBorder {
@@ -66,11 +68,27 @@ li > ul, li > ol { margin-bottom: 0; }
 h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 
 /** Links */
-a { color: #2a7ae2; text-decoration: none; }
-a:visited { color: #1756a9; }
-a:hover { color: #111; text-decoration: underline; }
-.social-media-list a:hover { text-decoration: none; }
-.social-media-list a:hover .username { text-decoration: underline; }
+a {
+  color: $primaryColor;
+  text-decoration: none;
+}
+a:visited { 
+  color: $primaryColor;
+}
+a:hover {
+  color: $secondaryColor;
+  text-decoration: underline;
+}
+
+.social-media-list{
+  a:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
+}
 
 /** Blockquotes */
 blockquote { color: #828282; border-left: 4px solid #e8e8e8; padding-left: 15px; font-size: 18px; letter-spacing: -1px; font-style: italic; }
