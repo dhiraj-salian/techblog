@@ -14,6 +14,8 @@ github_username:  dhiraj-salian
 theme: minima
 plugins:
   - jekyll-feed
+show_excerpts: true
+markdown: GFM
 
 # Exclude settings
 exclude:
