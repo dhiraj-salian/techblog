@@ -22,5 +22,5 @@ exclude:
   - techblog.code-workspace
 
 # Disqus settings
-disqus:
-  shortname: techblog_by_dhiraj
+# disqus:
+#   shortname: techblog_by_dhiraj
