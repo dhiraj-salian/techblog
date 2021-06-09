@@ -19,3 +19,7 @@ markdown: GFM
 # Exclude settings
 exclude:
   - techblog.code-workspace
+
+# Disqus settings
+disqus:
+  shortname: techblog_by_dhiraj
