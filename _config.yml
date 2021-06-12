@@ -8,7 +8,10 @@ description: >-
   developing and deploying quality code.
 baseurl: "/"
 url: "https://blogs.dhirajsalian.com"
+portfolio_hostname: "dhirajsalian.com"
 github_username:  dhiraj-salian
+linkedin_username: dhiraj-salian
+rss: Subscribe
 
 # Build settings
 theme: minima
