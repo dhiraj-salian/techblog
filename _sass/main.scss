@@ -1,7 +1,5 @@
 $primaryColor: rgba(213,112,34,1);
-$primaryColorVariant: rgb(197, 86, 1);
 $secondaryColor: rgba(168,0,111,1);
-$secondaryColorVariant: rgb(102, 0, 68);
 $backgroundColor: #0f0e15;
 $surfaceColor: #17151e;
 $onBackgroundColor: #ffffff;
@@ -90,10 +88,6 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $secondaryColor;
   text-decoration: none;
-}
-
-a:visited { 
-  color: $secondaryColorVariant;
 }
 
 a:hover {
