@@ -15,12 +15,6 @@
               {{ site.title | escape }}
             {%- endif -%}
             </li>
-            {%- if site.portfolio_hostname -%}
-            <li><a href="https://{{ site.portfolio_hostname | cgi_escape | escape }}">{{site.portfolio_hostname}}</a></li>
-            {%- endif -%}
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
             {%- if site.show_about_footer -%}
             <li><a href="{{ '/about' | relative_url }}">About this Site</a></li>
             {%- endif -%}

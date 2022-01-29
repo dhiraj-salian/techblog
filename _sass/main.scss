@@ -313,19 +313,19 @@ table {
   width: 100%;
   flex-wrap: wrap;
   margin: 10px auto;
-  min-width: 320px;
+  min-width: 210px;
 }
 
 .post-card {
   display: flex;
-  margin: 15px auto;
+  margin: 10px auto;
   border: 0.5px solid $onBackgroundColor;
   border-radius: 12px;
   background-color: $backgroundColor;
   background-blend-mode: overlay;
   background-size: cover;
   height: 300px;
-  min-width: 300px;
+  min-width: 210px;
   width: 100%;
   padding: 15px;
   flex-direction: column;

@@ -7,3 +7,6 @@ vendor
 
 # vscode
 *.code-workspace
+
+# intellij
+/.idea/
