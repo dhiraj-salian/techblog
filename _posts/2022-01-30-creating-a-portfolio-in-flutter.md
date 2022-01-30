@@ -22,6 +22,7 @@ Here is a code snippet which shows how to add a circle avatar.
 Code:
 
 ```dart
+
 class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
