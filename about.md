@@ -23,6 +23,7 @@ Lastly, if you would like to create a similar blogging website, check them out:
  * [Jekyll](https://jekyllrb.com/) - For Markdown Based Blog framework.
  * [GitHub Pages](https://pages.github.com) - For hosting static site.
  * [Unsplash](https://unsplash.com) - For high quality photos.
+ * [Icons8](https://icons8.com) - For icons collections.
 
 Yours truly,</br>
 Dhiraj

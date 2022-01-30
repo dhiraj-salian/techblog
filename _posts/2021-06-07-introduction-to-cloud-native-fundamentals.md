@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction to Cloud Native Fundamentals"
 date:   2021-06-07 22:30:30 +0530
 image: "assets/images/cover/surface-R8bY83YDXnY-unsplash.jpg"
-categories: cloud-native kubernetes
+categories: deploy kubernetes cloud-native
 ---
 
 Cloud-native refers to set of practices that helps an organization **to build and manage applications at scale** using private, hybrid or public cloud providers. It also helps to increase feature velocity i.e. how quickly an organization can respond to changes and be agile.
