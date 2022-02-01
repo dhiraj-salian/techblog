@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Creating a Portfolio in Flutter"
-date:   2022-01-30 04:45:30 +0530
+date:   2022-01-30
 image: "assets/images/cover/norbert-levajsics-gCUOkv04kbI-unsplash.jpg"
 categories: flutter portfolio
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Competitive Programming"
-date:   2022-01-31 23:00:00 +0530
+date:   2022-01-31
 image: "assets/images/cover/faizur-rehman-pHPzdEHN6Os-unsplash.jpg"
 categories: java programming
 ---

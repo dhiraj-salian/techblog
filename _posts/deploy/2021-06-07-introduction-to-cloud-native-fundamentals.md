@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introduction to Cloud Native Fundamentals"
-date:   2021-06-07 22:30:30 +0530
+date:   2021-06-07
 image: "assets/images/cover/surface-R8bY83YDXnY-unsplash.jpg"
 categories: kubernetes cloud-native
 ---
