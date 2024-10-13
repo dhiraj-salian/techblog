@@ -3,7 +3,7 @@ layout: post
 title:  "Generative AI 1.3: Probability and Statistics"
 date:   2024-09-21
 image: "assets/images/cover/norbert-levajsics-gCUOkv04kbI-unsplash.jpg"
-categories: gen-ai maths
+categories: gen-ai ml
 ---
 
 In machine learning and generative AI, probability is used to model uncertainty and randomness, while statistics helps us make inferences about data. These concepts are foundational for understanding how models make predictions, how we can measure uncertainty, and how models like **VAEs** and **GANs** work.
@@ -130,7 +130,7 @@ $$
 #### **Example**:
 If we have a dataset of coin flips and want to estimate the probability $p$ of getting heads, we use MLE to find the value of $p$ that maximizes the likelihood of observing the given coin flips.
 
-### **1.3.5 Using Probability and Statistics in Python**
+### **Using Probability and Statistics in Python**
 
 Let’s implement some of the core probability and statistics concepts in Python using **NumPy**.
 
