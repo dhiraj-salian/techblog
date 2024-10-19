@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: single
 title:  "Generative AI 5: Generative Adversarial Networks (GANs)"
 date:   2024-09-26
-image: "assets/images/cover/norbert-levajsics-gCUOkv04kbI-unsplash.jpg"
-categories: gen-ai ml
+categories: artificial-intelligence
 ---
 
 **Generative Adversarial Networks (GANs)** are a type of generative model that consists of two neural networks: a **generator** and a **discriminator**. These two networks are trained simultaneously in a competitive process where the generator tries to create realistic data, and the discriminator tries to distinguish between real and fake data.

@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: single
 title:  "Arrange GameObjects randomly in Unity"
 date:   2022-02-13
-image: "assets/images/cover/surface-R8bY83YDXnY-unsplash.jpg"
-categories: unity brick-breaker
+categories: unity
 ---
 
 In this blog, we will learn how to randomly arrange objects within the screen boundaries

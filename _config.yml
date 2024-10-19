@@ -1,27 +1,174 @@
-# Site settings
-title: TechBlog by Dhiraj
-year: 2021
-email: contact@dhirajsalian.com
-author: Dhiraj Salian
-description: >- 
-  Experiences on Design, Develop & Deploy.
-baseurl: "/"
+theme: "minimal-mistakes-jekyll"
+minimal_mistakes_skin: "dark"
+
+# Site Settings
+locale: "en-US"
+rtl: false
+title: "TechBlog By Dhiraj"
+title_separator: "-"
+subtitle: "Break Code, Build Knowledge."
+name: "Dhiraj Salian"
+description: "Welcome to *TechBlog by Dhiraj*—your go-to resource for mastering all things tech! Dive into articles on frontend, backend, machine learning, AI, Unity, and more as we break down complex concepts with humor and hands-on examples. Stay curious, keep coding!"
 url: "https://blogs.dhirajsalian.com"
-rss: Subscribe
+baseurl: "/"
+repository: "dhiraj-salian/techblog"
+logo: "/assets/images/logo.png"
+masthead_title: " "
+breadcrumbs: true
+words_per_minute: 200
+enable_copy_code_button: true
+copyright: "Dhiraj Salian"
+copyright_url: "https://dhirajsalian.com"
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "blogs-dhirajsalian-com"
+atom_feed:
+  hide: true
+search: true
+search_full_content: true
+search_provider: "lunr"
+lunr:
+  search_within_pages: true
 
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
-show_excerpts: true
-show_about_footer: true
-markdown: GFM
+# Site Author
+author:
+  name: "Dhiraj Salian"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Software Engineer"
+  location: "Bengaluru, IN"
+  email: "contact@dhirajsalian.com"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://dhirajsalian.com"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/dhiraj-salian"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/dhiraj-salian"
 
-# Exclude settings
+# Reading Files
+include:
+  - .htaccess
+  - _pages
 exclude:
-  - techblog.code-workspace
-  - .idea/
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - "*.code-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# Disqus settings
-disqus:
-  shortname: blogs-dhirajsalian-com
+# Conversion
+markdown: kramdown
+mathjax: true
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+timezone: "Asia/Kolkata"
+
+# Pagination with jekyll-paginate
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      show_date: true
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      toc: true
+      toc_sticky: true

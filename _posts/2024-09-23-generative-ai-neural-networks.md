@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: single
 title:  "Generative AI 2: Neural Networks"
 date:   2024-09-23
-image: "assets/images/cover/norbert-levajsics-gCUOkv04kbI-unsplash.jpg"
-categories: gen-ai ml
+categories: artificial-intelligence
 ---
 
 A **neural network** is a computational model inspired by the way biological neural networks work. It is composed of layers of neurons (nodes), which are connected by **weights**. Neural networks are used to approximate complex functions and learn patterns from data through training.

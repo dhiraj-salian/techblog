@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: single
 title:  "Generative AI 3: Transformer Networks and Large Language Models (LLMs)"
 date:   2024-09-24
-image: "assets/images/cover/norbert-levajsics-gCUOkv04kbI-unsplash.jpg"
-categories: gen-ai ml
+categories: artificial-intelligence
 ---
 
 **Transformers** are the foundation of modern **Large Language Models (LLMs)** such as **GPT-3**, **BERT**, and **T5**. In this step, we will explore the transformer architecture, its components, and how it enables LLMs to process and generate human-like text. We will also learn about **tokenizers**, which are critical for preparing text data for transformer models.

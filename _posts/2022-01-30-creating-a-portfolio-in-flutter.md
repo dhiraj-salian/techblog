@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: single
 title:  "Creating a Portfolio in Flutter"
 date:   2022-01-30
-image: "assets/images/cover/norbert-levajsics-gCUOkv04kbI-unsplash.jpg"
-categories: flutter portfolio
+categories: flutter
 ---
 
 In this blog, we will learn to create flutter widgets for our portfolio.
