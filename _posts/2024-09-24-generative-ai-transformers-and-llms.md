@@ -7,23 +7,23 @@ categories: artificial-intelligence
 
 **Transformers** are the foundation of modern **Large Language Models (LLMs)** such as **GPT-3**, **BERT**, and **T5**. In this step, we will explore the transformer architecture, its components, and how it enables LLMs to process and generate human-like text. We will also learn about **tokenizers**, which are critical for preparing text data for transformer models.
 
-### **3.1 Transformer Architecture**
+## 3.1 Transformer Architecture
 
 The transformer is a deep learning architecture designed to process sequences of data in parallel using a mechanism called **self-attention**. It has become the dominant model for NLP tasks due to its ability to handle long-range dependencies and scale to large datasets.
 
-#### **Key Components of Transformers**:
+### Key Components of Transformers:
 
 1. **Self-Attention**:
    - The **self-attention** mechanism allows the model to focus on different parts of the input sequence to understand relationships between words, regardless of their position in the sequence.
    - It computes a weighted sum of all input tokens, where the weights (or "attention scores") represent the importance of each token relative to others.
 
    **Formula**:
-   $$
+   \\[
    \text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right) V
-   $$
+   \\]
    Where:
-   - $Q$ (Query), $K$ (Key), and $V$ (Value) are matrices representing the input tokens.
-   - $d_k$ is the dimension of the key vectors.
+   - \\(Q\\) (Query), \\(K\\) (Key), and \\(V\\) (Value) are matrices representing the input tokens.
+   - \\(d_k\\) is the dimension of the key vectors.
 
 2. **Multi-Head Attention**:
    - Instead of a single attention function, the transformer uses multiple attention heads to focus on different parts of the input. Each attention head operates independently, and their outputs are combined.
@@ -38,11 +38,11 @@ The transformer is a deep learning architecture designed to process sequences of
    - **Encoder**: The encoder reads the input sequence and processes it through self-attention and feed-forward layers.
    - **Decoder**: The decoder generates the output sequence by attending to both the encoder's output and the previously generated tokens.
 
-### **3.2 Tokenization**
+## 3.2 Tokenization
 
 Before feeding text into a transformer model, it needs to be converted into tokens (numerical representations). **Tokenization** is the process of splitting text into smaller units like words, subwords, or characters.
 
-#### **Types of Tokenizers**:
+### Types of Tokenizers:
 
 1. **Word Tokenizers**:
    - These split text into individual words.
@@ -58,24 +58,24 @@ Before feeding text into a transformer model, it needs to be converted into toke
    - These split text into individual characters.
    - Example: `"hello"` → `["h", "e", "l", "l", "o"]`
 
-#### **Why Tokenization is Important**:
+### Why Tokenization is Important:
 - Tokenization is crucial for transforming text into a format that LLMs can process. Each token is mapped to an embedding, which serves as the model's input.
 
-#### **Practical Tokenization with Hugging Face**:
+### Practical Tokenization with Hugging Face:
 We’ll use the **Hugging Face Transformers** library to load pre-trained tokenizers and process text for transformer models like GPT-2 and BERT.
 
-### **3.3 Fine-Tuning Large Language Models (LLMs)**
+## 3.3 Fine-Tuning Large Language Models (LLMs)
 
-#### **Pre-trained LLMs**:
+### Pre-trained LLMs:
 LLMs like **GPT**, **BERT**, and **T5** are pre-trained on massive text datasets using unsupervised learning objectives. These models can be fine-tuned on specific downstream tasks such as text classification, text generation, or summarization.
 
 - **GPT (Generative Pre-trained Transformer)**: Uses **causal language modeling** to predict the next word in a sequence.
 - **BERT (Bidirectional Encoder Representations from Transformers)**: Uses **masked language modeling** to predict masked words in a sentence.
 - **T5 (Text-to-Text Transfer Transformer)**: Treats all NLP tasks as text-to-text problems, making it highly flexible.
 
-### **Tokenization and Fine-Tuning with Hugging Face**
+## Tokenization and Fine-Tuning with Hugging Face
 
-#### **Tokenization Example**
+### Tokenization Example
 
 Let’s tokenize some text using a pre-trained **BERT** tokenizer.
 
@@ -97,16 +97,16 @@ input_ids = tokenizer.encode(sentence, add_special_tokens=True)
 print("Input IDs:", input_ids)
 ```
 
-#### **Output**:
-
+### Output:
 ```
 Tokens: ['i', 'love', 'learning', 'about', 'transformers', '.']
 Input IDs: [101, 1045, 2293, 4083, 2055, 19081, 1012, 102]
 ```
+{: .no-copy}
 
 Here, special tokens [101] (start token) and [102] (end token) are added automatically.
 
-#### **Fine-Tuning Example**
+### Fine-Tuning Example
 
 Next, let's fine-tune a pre-trained BERT model on a text classification task (e.g., sentiment analysis).
 
@@ -150,8 +150,7 @@ trainer = Trainer(
 trainer.train()
 ```
 
-#### **Output**:
-
+### Output:
 ```
 ***** Running training *****
   Num examples = 25000
@@ -172,8 +171,9 @@ Epoch    Training Loss   Validation Loss   Accuracy
   Batch size = 64
 Final Accuracy on test set: 87.50%
 ```
+{: .no-copy}
 
-### **Summary of Transformers and LLMs**:
+## Summary of Transformers and LLMs:
 - Transformers are the backbone of modern Large Language Models (LLMs) like GPT, BERT, and T5. They use self-attention mechanisms to process and generate text efficiently.
 - Tokenizers are essential for converting text into numerical tokens that LLMs can understand. Pre-trained tokenizers like those from Hugging Face handle this process automatically.
 - Fine-tuning allows you to adapt pre-trained LLMs to specific tasks (e.g., text classification, generation) using your own dataset.

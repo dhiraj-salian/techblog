@@ -162,6 +162,7 @@ Matrix-matrix multiplication: [[3 4]
 L2 norm of vector a: 2.23606797749979
 Distance between a and b: 2.8284271247461903
 ```
+{: .no-copy}
 
 ## Summary of Linear Algebra Concepts:
 - Vectors are used to represent input data, model parameters, and outputs.

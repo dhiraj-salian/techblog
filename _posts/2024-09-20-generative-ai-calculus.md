@@ -107,10 +107,9 @@ w_{\text{new}} = w_{\text{old}} - 0.1 \cdot 0.5 = w_{\text{old}} - 0.05
 
 ## Derivatives and Gradient Descent in Python
 
-### Python Code:
-
 Here’s a simple implementation to compute derivatives and perform gradient descent on a quadratic function \\(f(x) = x^2\\).
 
+### Python Code:
 ```python
 import numpy as np
 
@@ -134,7 +133,6 @@ for i in range(epochs):
 ```
 
 ### Output:
-
 ```
 Epoch 1: x = 8.0, f(x) = 64.0
 Epoch 2: x = 6.4, f(x) = 40.96000000000001
@@ -145,6 +143,7 @@ Epoch 5: x = 3.2768, f(x) = 10.737090560000001
 Epoch 20: x = 0.10737418240000006, f(x) = 0.011529215046068475
 
 ```
+{: .no-copy}
 
 ## Summary of Calculus Concepts:
 - Derivatives measure how a function changes as its input changes. They are essential for computing gradients in neural networks.

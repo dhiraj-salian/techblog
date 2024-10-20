@@ -9,7 +9,7 @@ In this blog, we will learn to create flutter widgets for our portfolio.
 The portfolio consists of two pages - **PortfolioPage** and **ProjectPage**. We will
 learn to create widgets present in these pages.
 
-### Portfolio Page:
+# Portfolio Page:
 The portfolio page consists of many built in widgets like texts, icons, but we
 will mainly focus on building the avatar with a gradient border.
 
@@ -86,7 +86,7 @@ Output:
 
 ![ProjectsPage]({{ 'assets/images/portfolio-avatar-example2.png' | relative_url }})
 
-### Projects Page:
+# Projects Page:
 The project page consists of a single type of widget which I call project card. We will
 focus on building this widget which displays the project information and image in a
 card.

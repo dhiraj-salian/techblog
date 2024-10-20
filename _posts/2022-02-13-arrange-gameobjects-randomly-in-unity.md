@@ -9,7 +9,7 @@ In this blog, we will learn how to randomly arrange objects within the screen bo
 in Unity game engine. We will take **Brick Breaker** game as an example to demonstrate how to randomly
 add bricks within the required screen space.
 
-### Introduction
+# Introduction
 
 If you have never played a Brick Breaker game, please check this out -
 [Brick Breaker](https://brick-breaker.dhirajsalian.com). For the ones who don't want to
@@ -23,7 +23,7 @@ every new level in the game.
 Before moving ahead, if you think you are a beginner in Unity, please go through this amazing
 tutorial - [Brick Breaker Game](https://www.youtube.com/watch?v=NWG8vO02oj4&ab_channel=freeCodeCamp.org).
 
-### Brick Creation
+# Brick Creation
 
 We will be creating a Brick Prefab with the following property and scripts. The important
 property to note is the scale (X=1.8 and Y=0.8). The scale is important if you want to 
@@ -114,12 +114,12 @@ public class BrickScript : MonoBehaviour
 }
 ```
 
-### Brick Arrangement
+# Brick Arrangement
 
 To arrange bricks in the screen space, we need to visualize the brick container space as a 2-dimensional matrix.
 The screen co-ordinates should be known to determine the brick container space co-ordinates.
 
-#### Determining Screen Co-ordinates
+## Determining Screen Co-ordinates
 
 ```cs
 Vector3 bottomLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, -10));
@@ -128,7 +128,7 @@ float screenWidth = Mathf.Floor(topRight.x - bottomLeft.x);
 float screenHeight = Mathf.Floor(topRight.y - bottomLeft.y);
 ```
 
-#### Determining the Brick Container Space Co-ordinates
+## Determining the Brick Container Space Co-ordinates
 
 Once we have screenWidth and screenHeight, it is easier to determine the brick container space co-ordinates.
 To get the count of bricks in horizontal direction, considering the brick length as 2 units and leaving space of 1 brick
@@ -144,7 +144,7 @@ the screen.
 int countY = (int)Mathf.Floor(screenHeight/2)-2;
 ```
 
-#### Determining the start Co-ordinates of Brick Container Space
+## Determining the start Co-ordinates of Brick Container Space
 
 To get the start co-ordinates of Brick Container for horizontal direction, we divide the countX by 2 and negate it. The
 reason we divide and negate is to start building bricks from left side of 0 co-ordinate. To get the start co-ordinate
@@ -154,7 +154,7 @@ int startX = -countX/2;
 int startY = 1;
 ```
 
-### Random Brick Placement
+# Random Brick Placement
 
 The logic to place bricks randomly is simple. It is as follows:
 1. Randomly generate x position, y position and points for a brick.

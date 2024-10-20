@@ -171,4 +171,4 @@ defaults:
       comments: true
       share: true
       toc: true
-      toc_sticky: true
+      classes: wide
