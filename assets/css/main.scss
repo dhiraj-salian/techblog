@@ -27,7 +27,7 @@ $base0f: #00f769;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// This changes the code box
+// code block fonts
 .highlight {
   margin: 0;
   padding: 0.5em;
@@ -36,6 +36,18 @@ $base0f: #00f769;
   line-height: 1.8;
 }
 
+// maths formula fonts
 .MathJax {
   font-size: 0.9em !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
