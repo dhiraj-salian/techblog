@@ -164,7 +164,7 @@ Distance between a and b: 2.8284271247461903
 ```
 {: .no-copy}
 
-## Summary of Linear Algebra Concepts:
+## Summary:
 - Vectors are used to represent input data, model parameters, and outputs.
 - Matrices are used to transform input vectors (through matrix-vector multiplication) in neural networks.
 - The dot product computes weighted sums in neurons.

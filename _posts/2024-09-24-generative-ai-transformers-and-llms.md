@@ -173,7 +173,7 @@ Final Accuracy on test set: 87.50%
 ```
 {: .no-copy}
 
-## Summary of Transformers and LLMs:
+## Summary:
 - Transformers are the backbone of modern Large Language Models (LLMs) like GPT, BERT, and T5. They use self-attention mechanisms to process and generate text efficiently.
 - Tokenizers are essential for converting text into numerical tokens that LLMs can understand. Pre-trained tokenizers like those from Hugging Face handle this process automatically.
 - Fine-tuning allows you to adapt pre-trained LLMs to specific tasks (e.g., text classification, generation) using your own dataset.

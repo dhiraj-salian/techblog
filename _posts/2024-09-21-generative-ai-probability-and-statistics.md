@@ -83,7 +83,8 @@ The **variance** measures how spread out the values of a random variable are. It
 
 ### Conditional Probability
 
-Conditional probability is the probability of an event occurring given that another event has already occurred. The conditional probability of event \\(A\\) given event \\(B\\) is denoted by \\(P(A|B)\\).
+Conditional probability is the probability of an event occurring given that another event has already occurred. The conditional probability of event \\(A\\)
+given event \\(B\\) is denoted by \\(P(A|B)\\).
 
 ### Formula:
 \\[
@@ -133,6 +134,11 @@ If we have a dataset of coin flips and want to estimate the probability \\(p\\) 
 
 Let’s implement some of the core probability and statistics concepts in Python using **NumPy**.
 
+### Install scipy and matplotlib:
+```bash
+pip install scipy matplotlib
+```
+
 ### Python Code:
 ```python
 import numpy as np
@@ -174,6 +180,8 @@ Variance: 1.0155684817884316
 Standard Deviation: 1.007754392326042
 ```
 {: .no-copy}
+
+![Normal Distribution]({{ 'assets/images/probability_density_function_normal_distribution.png' | relative_url }})
 
 
 ## Summary of Probability and Statistics Concepts:

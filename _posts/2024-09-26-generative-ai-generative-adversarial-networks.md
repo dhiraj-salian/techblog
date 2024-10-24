@@ -180,7 +180,7 @@ Epoch [50/50], d_loss: 0.3456, g_loss: 1.2234
 {: .no-copy}
 2. **Generated Samples**: After training, the GAN will generate new images of handwritten digits. These will look similar to the MNIST dataset.
 
-## Summary of Generative Adversarial Networks (GANs):
+## Summary:
 - GANs consist of two neural networks: a generator that creates data and a discriminator that distinguishes between real and fake data.
 - The generator is trained to fool the discriminator, while the discriminator is trained to correctly classify real vs. fake data.
 - The training process is a minimax game, where the two networks improve together.

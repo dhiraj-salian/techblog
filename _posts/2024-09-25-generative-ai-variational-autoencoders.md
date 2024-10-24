@@ -156,7 +156,7 @@ Epoch 10, Loss: 103.2348
 {: .no-copy}
 2. **Generated Samples**: After training, the VAE can generate new images by sampling from the latent space. The images will look like handwritten digits (similar to the MNIST dataset).
 
-## Summary of Variational Autoencoders (VAEs):
+## Summary:
 - VAEs are generative models that learn a probabilistic representation of the input data in a low-dimensional latent space.
 - The encoder maps the input to a distribution over the latent space, and the decoder reconstructs the data from the latent space.
 - The loss function of a VAE is a combination of reconstruction loss and KL divergence, which regularizes the latent space.

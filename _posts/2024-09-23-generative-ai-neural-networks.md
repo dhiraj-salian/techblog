@@ -169,8 +169,9 @@ Test Accuracy: 97.68%
 ```
 {: .no-copy}
 
-## Summary of Neural Networks Concepts:
+## Summary:
 - A neural network is composed of layers of neurons, each performing a linear transformation followed by a non-linear activation function.
 - Forward propagation passes data through the network to generate predictions, and backpropagation is used to compute the gradients of the loss function.
 - The network’s parameters (weights and biases) are updated using an optimizer like Adam or SGD.
 - PyTorch provides tools to easily implement neural networks and handle both forward and backward propagation.
+- For a detailed working of a simple neural network checkout - [Simple Neural Network in Python with Math behind it]({{ site.url }}{{ site.baseurl }}{% link _posts/2024-09-23-simplified-neural-network.md %})

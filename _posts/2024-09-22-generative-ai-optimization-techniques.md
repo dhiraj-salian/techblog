@@ -124,48 +124,9 @@ The **learning rate** \\(\eta\\) controls the size of the steps taken in gradien
 
 ## Implementing Gradient Descent and Adam in Python
 
-Let’s implement **gradient descent** and **Adam** optimizer in Python.
+This code implements the Adam optimizer to minimize the quadratic function  \\(f(x) = x^2\\)
 
-### Python Code: Gradient Descent
-
-This code demonstrates how to apply gradient descent to minimize a simple quadratic function \\(f(x) = x^2\\).
-
-```python
-import numpy as np
-
-# Define the function and its derivative
-def f(x):
-    return x**2
-
-def derivative_f(x):
-    return 2 * x
-
-# Gradient descent parameters
-x = 10  # Initial value of x
-learning_rate = 0.1
-epochs = 20
-
-# Perform gradient descent
-for i in range(epochs):
-    grad = derivative_f(x)  # Compute the gradient
-    x = x - learning_rate * grad  # Update x
-    print(f"Epoch {i+1}: x = {x}, f(x) = {f(x)}")
-```
-
-### Output:
-```
-Epoch 1: x = 8.0, f(x) = 64.0
-Epoch 2: x = 6.4, f(x) = 40.96000000000001
-Epoch 3: x = 5.12, f(x) = 26.2144
-...
-Epoch 20: x = 0.10737418240000006, f(x) = 0.011529215046068475
-```
-{: .no-copy}
-
-### Python Code: Adam Optimizer
-
-This code implements the Adam optimizer to minimize the same quadratic function  \\(f(x) = x^2\\)
-
+### Python Code:
 ```python
 import numpy as np
 
@@ -208,7 +169,7 @@ Epoch 20: x = 0.10000572233424616, f(x) = 0.010001144517619567
 ```
 {: .no-copy}
 
-## Summary of Optimization Techniques:
+## Summary:
 
 - Gradient Descent updates the parameters by computing the gradient of the loss function and moving in the direction of steepest descent.
 - SGD updates the parameters using a single or small batch of data, making it faster but noisier than regular gradient descent.

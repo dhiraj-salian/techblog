@@ -145,7 +145,7 @@ Epoch 20: x = 0.10737418240000006, f(x) = 0.011529215046068475
 ```
 {: .no-copy}
 
-## Summary of Calculus Concepts:
+## Summary:
 - Derivatives measure how a function changes as its input changes. They are essential for computing gradients in neural networks.
 - Gradients are vectors that point in the direction of the steepest increase of a function. In machine learning, they are used to update the model parameters.
 - The chain rule is crucial for computing gradients in multi-layered neural networks.
