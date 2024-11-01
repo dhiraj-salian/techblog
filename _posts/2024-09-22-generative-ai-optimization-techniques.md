@@ -19,11 +19,11 @@ The key idea behind gradient descent is that we compute the gradient (partial de
 
 For a parameter \\(w\\), the update rule in gradient descent is:
 \\[
-w = w - \eta \cdot \frac{\partial L(w)}{\partial w}
+w = w - \\eta \\cdot \\frac{\\partial L(w)}{\\partial w}
 \\]
 Where:
-- \\(\eta\\) is the **learning rate** (a small step size),
-- \\(\frac{\partial L(w)}{\partial w}\\) is the gradient of the loss function \\(L(w)\\) with respect to \\(w\\).
+- \\(\\eta\\) is the **learning rate** (a small step size),
+- \\(\\frac{\\partial L(w)}{\\partial w}\\) is the gradient of the loss function \\(L(w)\\) with respect to \\(w\\).
 
 ### Steps in Gradient Descent:
 1. **Initialize the weights** randomly.
@@ -41,7 +41,7 @@ Where:
 ### Update Rule for SGD:
 The update rule is similar to regular gradient descent, but the gradient is computed for a single training example or a small batch:
 \\[
-w = w - \eta \cdot \frac{\partial L_i(w)}{\partial w}
+w = w - \\eta \\cdot \\frac{\\partial L_i(w)}{\\partial w}
 \\]
 Where:
 - \\(L_i(w)\\) is the loss for the \\(i\\)-th training example.
@@ -59,13 +59,13 @@ Momentum is a technique used to speed up gradient descent by accumulating past g
 
 ### Update Rule with Momentum:
 \\[
-v = \beta v + \eta \cdot \nabla L(w)
+v = \\beta v + \\eta \\cdot \\nabla L(w)
 \\]
 \\[
 w = w - v
 \\]
 Where:
-- \\(\beta\\) is the **momentum term** (a value between 0 and 1 that controls the contribution of previous gradients),
+- \\(\\beta\\) is the **momentum term** (a value between 0 and 1 that controls the contribution of previous gradients),
 - \\(v\\) is the velocity (the accumulated gradient).
 
 Momentum helps smooth out the oscillations and speed up convergence, especially when the gradients have large variations.
@@ -80,30 +80,30 @@ Momentum helps smooth out the oscillations and speed up convergence, especially 
 
 1. Compute the running averages of the gradients:
    \\[
-   m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t
+   m_t = \\beta_1 m_{t-1} + (1 - \\beta_1) g_t
    \\]
    \\[
-   v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2
+   v_t = \\beta_2 v_{t-1} + (1 - \\beta_2) g_t^2
    \\]
    Where:
    - \\(m_t\\) is the first moment (mean of the gradient),
    - \\(v_t\\) is the second moment (variance of the gradient),
-   - \\(\beta_1\\) and \\(\beta_2\\) are decay rates for the first and second moments,
+   - \\(\\beta_1\\) and \\(\\beta_2\\) are decay rates for the first and second moments,
    - \\(g_t\\) is the gradient at time step \\(t\\).
 
 2. Bias correction:
    \\[
-   \hat{m}_t = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t}
+   \\hat{m}_t = \\frac{m_t}{1 - \\beta_1^t}, \\quad \\hat{v}_t = \\frac{v_t}{1 - \\beta_2^t}
    \\]
 
 3. Update the parameters:
    \\[
-   w_t = w_{t-1} - \eta \cdot \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}
+   w_t = w_{t-1} - \\eta \\cdot \\frac{\\hat{m}_t}{\\sqrt{\\hat{v}_t} + \\epsilon}
    \\]
 
 Where:
-- \\(\eta\\) is the learning rate,
-- \\(\epsilon\\) is a small constant to prevent division by zero.
+- \\(\\eta\\) is the learning rate,
+- \\(\\epsilon\\) is a small constant to prevent division by zero.
 
 ### Advantages of Adam:
 - Handles noisy data well.
@@ -112,7 +112,7 @@ Where:
 
 ## 1.4.5 Learning Rate
 
-The **learning rate** \\(\eta\\) controls the size of the steps taken in gradient descent. A small learning rate makes the optimization process slow but more accurate, while a large learning rate speeds up optimization but risks overshooting the minimum.
+The **learning rate** \\(\\eta\\) controls the size of the steps taken in gradient descent. A small learning rate makes the optimization process slow but more accurate, while a large learning rate speeds up optimization but risks overshooting the minimum.
 
 ### Learning Rate Tradeoff:
 - **Too small**: Convergence is slow.

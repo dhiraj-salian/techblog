@@ -19,7 +19,7 @@ The transformer is a deep learning architecture designed to process sequences of
 
    **Formula**:
    \\[
-   \text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right) V
+   \\text{Attention}(Q, K, V) = \\text{softmax}\\left( \\frac{QK^T}{\\sqrt{d_k}} \\right) V
    \\]
    Where:
    - \\(Q\\) (Query), \\(K\\) (Key), and \\(V\\) (Value) are matrices representing the input tokens.
@@ -74,6 +74,11 @@ LLMs like **GPT**, **BERT**, and **T5** are pre-trained on massive text datasets
 - **T5 (Text-to-Text Transfer Transformer)**: Treats all NLP tasks as text-to-text problems, making it highly flexible.
 
 ## Tokenization and Fine-Tuning with Hugging Face
+
+### Installing transformers and datasets
+```bash
+pip install accelerate transformers datasets
+```
 
 ### Tokenization Example
 

@@ -47,9 +47,9 @@ This neural network consists of:
 
 Now let’s explore the **math** behind each step in detail.
 
-## Forward Propagation
+## Step-by-Step Math Behind the Neural Network
 
-### Layer 1: Linear Transformation
+### 1. Layer 1: Linear Transformation
 
 The first layer takes two inputs and transforms them using a weight matrix \\( W_1 \\) and a bias vector \\( b_1 \\). This is called a **linear transformation**:
 
@@ -66,10 +66,10 @@ W_1 = \\begin{bmatrix} 0.2 & 0.4 \\\\ 0.1 & 0.6 \\end{bmatrix}, \\quad b_1 = \\b
 The output from the first layer is:
 
 \\[
-z_1 = \\begin{bmatrix} 0.2 & 0.4 \\\\ 0.1 & 0.6 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} + \\begin{bmatrix} 0.3 \\\\ 0.5 \\end{bmatrix} = \\begin{bmatrix} 1.3 \\\\ 2.3 \\end{bmatrix}
+z_1 = \\begin{bmatrix} 0.2 & 0.4 \\\\ 0.1 & 0.6 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} + \\begin{bmatrix} 0.3 \\\\ 0.5 \\end{bmatrix} = \\begin{bmatrix} 1.3 \\\\ 1.8 \\end{bmatrix}
 \\]
 
-### Layer 1: ReLU Activation
+### 2. Layer 1: ReLU Activation
 
 The ReLU activation function is applied element-wise to the output of the first layer:
 
@@ -80,10 +80,10 @@ The ReLU activation function is applied element-wise to the output of the first 
 Since both values are positive, the output remains the same:
 
 \\[
-a_1 = \\text{ReLU}(z_1) = \\begin{bmatrix} 1.3 \\\\ 2.3 \\end{bmatrix}
+a_1 = \\text{ReLU}(z_1) = \\begin{bmatrix} 1.3 \\\\ 1.8 \\end{bmatrix}
 \\]
 
-### Layer 2: Linear Transformation
+### 3. Layer 2: Linear Transformation
 
 Now, the result from the hidden layer is passed to the second (output) layer. We perform another linear transformation using the weights \\( W_2 \\) and bias \\( b_2 \\):
 
@@ -100,24 +100,24 @@ W_2 = \\begin{bmatrix} 0.7 & 0.9 \\end{bmatrix}, \\quad b_2 = 0.2
 Then the output is:
 
 \\[
-z_2 = \\begin{bmatrix} 0.7 & 0.9 \\end{bmatrix} \\cdot \\begin{bmatrix} 1.3 \\\\ 2.3 \\end{bmatrix} + 0.2 = 3.18
+z_2 = \\begin{bmatrix} 0.7 & 0.9 \\end{bmatrix} \\cdot \\begin{bmatrix} 1.3 \\\\ 1.8 \\end{bmatrix} + 0.2 = 3.18
 \\]
 
-### Layer 2: Sigmoid Activation
+### 4. Layer 2: Sigmoid Activation
 
 The sigmoid activation function is applied to transform \\( z_2 \\) into a probability:
 
 \\[
-\\hat{y} = \\frac{1}{1 + e^{-z_2}} = \\frac{1}{1 + e^{-3.18}} = 0.96
+\\hat{y} = \\frac{1}{1 + e^{-z_2}} = \\frac{1}{1 + e^{-2.73}} = 0.938
 \\]
 
 Thus, the predicted output of the network is 0.96, which is close to 1, meaning the network is confident the input belongs to the positive class.
 
-## Backward Propagation
+## Backpropagation: Adjusting the Weights
 
 After the forward pass, we calculate the loss (how wrong the network’s prediction is), and we adjust the weights using backpropagation.
 
-### Loss Calculation
+### 1. Loss Calculation
 
 We use binary cross-entropy loss for classification:
 
@@ -125,31 +125,114 @@ We use binary cross-entropy loss for classification:
 L = -[y \\log(\\hat{y}) + (1 - y) \\log(1 - \\hat{y})]
 \\]
 
-If the true label \\( y = 1 \\), and \\( \\hat{y} = 0.96 \\), the loss is:
+If the true label \\( y = 1 \\), and \\( \\hat{y} = 0.938 \\), the loss is:
 
 \\[
-L = -[\\log(0.96)] = 0.04
+L = -[\\log(0.938)] = 0.064
 \\]
 
-### Computing Gradients
+### 2. Backpropagation: Computing Gradients
 
-To adjust the weights, we compute the gradients of the loss with respect to each weight using the **chain rule** from calculus.
+To adjust the weights, we compute the gradients of the loss with respect to each weight using the **chain rule** from calculus. Let’s go step by step for each layer.
 
-For example, the gradient of the loss with respect to \\( W_2 \\), the weight between the hidden layer and the output, is computed as:
+#### Gradient of the Loss with Respect to \\( \\hat{y} \\)
+
+First, we calculate how much the loss changes with respect to the predicted output \\( \\hat{y} \\):
 
 \\[
-\\frac{\\partial L}{\\partial W_2} = \\frac{\\partial L}{\\partial \\hat{y}} \\cdot \\frac{\\partial \\hat{y}}{\\partial z_2} \\cdot \\frac{\\partial z_2}{\\partial W_2}
+\\frac{\\partial L}{\\partial \\hat{y}} = -\\frac{1}{\\hat{y}} + \\frac{0}{1 - \\hat{y}} = -\\frac{1}{0.938} = -1.066
 \\]
 
-Where:
-- \\( \\frac{\\partial L}{\\partial \\hat{y}} = -\\frac{1}{\\hat{y}} \\)
-- \\( \\frac{\\partial \\hat{y}}{\\partial z_2} = \\hat{y}(1 - \\hat{y}) \\)
-- \\( \\frac{\\partial z_2}{\\partial W_2} = a_1 \\) (the hidden layer output)
+#### Gradient of \\( \\hat{y} \\) with Respect to \\( z_2 \\) (Output of the Final Layer)
 
-Substituting the values, we compute the gradient and update the weights using:
+Since \\( \\hat{y} \\) is passed through a sigmoid function, the derivative of the sigmoid function is:
 
 \\[
-W_2 = W_2 - \\eta \\cdot \\frac{\\partial L}{\\partial W_2}
+\\frac{\\partial \\hat{y}}{\\partial z_2} = \\hat{y}(1 - \\hat{y}) = 0.938 \\times (1 - 0.938) = 0.0582
+\\]
+
+#### Gradient of the Loss with Respect to \\( z_2 \\)
+
+Now, using the chain rule, we multiply the above two values to get:
+
+\\[
+\\frac{\\partial L}{\\partial z_2} = \\frac{\\partial L}{\\partial \\hat{y}} \\times \\frac{\\partial \\hat{y}}{\\partial z_2} = -1.066 \\times 0.0582 = -0.062
+\\]
+
+#### Gradient of \\( z_2 \\) with Respect to \\( W_2 \\) (Second Layer Weights)
+
+The value of \\( z_2 \\) is a linear function of \\( W_2 \\), and so the gradient of \\( z_2 \\) with respect to \\( W_2 \\) is the hidden layer output \\( a_1 \\):
+
+\\[
+\\frac{\\partial z_2}{\\partial W_2} = a_1 = \\begin{bmatrix} 1.3 \\\\ 1.8 \\end{bmatrix}
+\\]
+
+#### Gradient of the Loss with Respect to \\( W_2 \\)
+
+Now, using the chain rule, we multiply:
+
+\\[
+\\frac{\\partial L}{\\partial W_2} = \\frac{\\partial L}{\\partial z_2} \\times \\frac{\\partial z_2}{\\partial W_2} = -0.062 \\times \\begin{bmatrix} 1.3 \\\\ 1.8 \\end{bmatrix} = \\begin{bmatrix} -0.0806 \\\\ -0.1116 \\end{bmatrix}
+\\]
+
+This tells us how to adjust the weights of \\( W_2 \\) to reduce the loss.
+
+### 3. Backpropagation to the Hidden Layer
+
+#### Gradient of \\( z_2 \\) with Respect to \\( a_1 \\) (Output of the First Layer)
+
+Next, we calculate how much the loss affects the hidden layer output \\( a_1 \\):
+
+\\[
+\\frac{\\partial z_2}{\\partial a_1} = W_2 = \\begin{bmatrix} 0.7 \\\\ 0.9 \\end{bmatrix}
+\\]
+
+#### Gradient of the Loss with Respect to \\( a_1 \\)
+
+Using the chain rule:
+
+\\[
+\\frac{\\partial L}{\\partial a_1} = \\frac{\\partial L}{\\partial z_2} \\times \\frac{\\partial z_2}{\\partial a_1} = -0.039936 \\times \\begin{bmatrix} 0.7 \\\\ 0.9 \\end{bmatrix} = \\begin{bmatrix} -0.02796 \\\\ -0.03594 \\end{bmatrix}
+\\]
+
+#### Gradient of \\( a_1 \\) with Respect to \\( z_1 \\) (Before ReLU)
+
+Since \\( a_1 = \\text{ReLU}(z_1) \\), the gradient of ReLU is \\( 1 \\) for positive values:
+
+\\[
+\\frac{\\partial a_1}{\\partial z_1} = \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix}
+\\]
+
+#### Gradient of the Loss with Respect to \\( z_1 \\)
+
+Now, the gradient of the loss with respect to \\( z_1 \\) is simply:
+
+\\[
+\\frac{\\partial L}{\\partial z_1} = \\frac{\\partial L}{\\partial a_1} \\times \\frac{\\partial a_1}{\\partial z_1} = \\begin{bmatrix} -0.02796 \\\\ -0.03594 \\end{bmatrix}
+\\]
+
+#### Gradient of \\( z_1 \\) with Respect to \\( W_1 \\) (First Layer Weights)
+
+Finally, the gradient of \\( z_1 \\) with respect to \\( W_1 \\) is the input \\( x \\):
+
+\\[
+\\frac{\\partial z_1}{\\partial W_1} = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}
+\\]
+
+#### Gradient of the Loss with Respect to \\( W_1 \\)
+
+Using the chain rule, we multiply:
+
+\\[
+\\frac{\\partial L}{\\partial W_1} = \\frac{\\partial L}{\\partial z_1} \\times \\frac{\\partial z_1}{\\partial W_1} = \\begin{bmatrix} -0.02796 \\\\ -0.03594 \\end{bmatrix} \\times \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} -0.02796 & -0.07188 \\\\ -0.03594 & -0.08985 \\end{bmatrix}
+\\]
+
+### 4. Update the Weights
+
+Now that we have the gradients, we update the weights \\( W_1 \\) and \\( W_2 \\) using gradient descent:
+
+\\[
+W_{\\text{new}} = W_{\\text{old}} - \\eta \\cdot \\frac{\\partial L}{\\partial W}
 \\]
 
 Where \\( \\eta \\) is the learning rate.
@@ -161,5 +244,3 @@ This example shows how a neural network makes predictions (forward pass) and adj
 - **Activation functions** like ReLU and sigmoid.
 - **Loss calculation** using binary cross-entropy.
 - **Backpropagation** to compute the gradients and update the weights.
-
-By understanding the math behind these steps, you gain deeper insight into how neural networks learn. Whether you're working on image classification, text generation, or other tasks, the principles discussed here are foundational to how neural networks operate.

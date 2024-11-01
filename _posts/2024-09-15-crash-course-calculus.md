@@ -17,34 +17,34 @@ Calculus is a branch of mathematics focused on **change** (differentiation) and 
 ### Notation:
 If \\( y = f(x) \\), the derivative of \\( y \\) with respect to \\( x \\) is written as:
 \\[
-\frac{dy}{dx} \quad \text{or} \quad f'(x)
+\\frac{dy}{dx} \\quad \\text{or} \\quad f'(x)
 \\]
 This gives the slope of the function at any point \\( x \\).
 
 ### Basic Rules:
 - **Constant Rule**: The derivative of a constant is zero.
   \\[
-  \frac{d}{dx}(c) = 0
+  \\frac{d}{dx}(c) = 0
   \\]
 - **Power Rule**: The derivative of \\( x^n \\) is \\( nx^{n-1} \\).
   \\[
-  \frac{d}{dx}(x^n) = nx^{n-1}
+  \\frac{d}{dx}(x^n) = nx^{n-1}
   \\]
 - **Sum Rule**: The derivative of a sum is the sum of the derivatives.
   \\[
-  \frac{d}{dx}(f(x) + g(x)) = f'(x) + g'(x)
+  \\frac{d}{dx}(f(x) + g(x)) = f'(x) + g'(x)
   \\]
 - **Product Rule**: The derivative of a product is:
   \\[
-  \frac{d}{dx}(f(x)g(x)) = f'(x)g(x) + f(x)g'(x)
+  \\frac{d}{dx}(f(x)g(x)) = f'(x)g(x) + f(x)g'(x)
   \\]
 - **Quotient Rule**: The derivative of a quotient is:
   \\[
-  \frac{d}{dx}\left(\frac{f(x)}{g(x)}\right) = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}
+  \\frac{d}{dx}\\left(\\frac{f(x)}{g(x)}\\right) = \\frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}
   \\]
 - **Chain Rule**: The derivative of a composite function is:
   \\[
-  \frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)
+  \\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)
   \\]
 
 ### Geometrically:
@@ -60,32 +60,32 @@ The derivative gives the slope of the tangent line to the curve of \\( f(x) \\) 
 ### Notation:
 The indefinite integral (anti-derivative) of \\( f(x) \\) with respect to \\( x \\) is written as:
 \\[
-\int f(x) \, dx
+\\int f(x) \\, dx
 \\]
 The definite integral of \\( f(x) \\) from \\( a \\) to \\( b \\) is:
 \\[
-\int_{a}^{b} f(x) \, dx
+\\int_{a}^{b} f(x) \\, dx
 \\]
 This calculates the area under the curve from \\( x = a \\) to \\( x = b \\).
 
 ### Basic Rules:
 - **Constant Rule**: The integral of a constant is:
   \\[
-  \int c \, dx = cx + C
+  \\int c \\, dx = cx + C
   \\]
   where \\( C \\) is the constant of integration.
 - **Power Rule**: The integral of \\( x^n \\) is:
   \\[
-  \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad \text{(for \\( n \neq -1 \\))}
+  \\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C \\quad \\text{(for \\( n \\neq -1 \\))}
   \\]
 - **Sum Rule**: The integral of a sum is the sum of the integrals.
   \\[
-  \int (f(x) + g(x)) \, dx = \int f(x) \, dx + \int g(x) \, dx
+  \\int (f(x) + g(x)) \\, dx = \\int f(x) \\, dx + \\int g(x) \\, dx
   \\]
 
 ### Fundamental Theorem of Calculus:
 \\[
-\frac{d}{dx} \left( \int_{a}^{x} f(t) \, dt \right) = f(x)
+\\frac{d}{dx} \\left( \\int_{a}^{x} f(t) \\, dt \\right) = f(x)
 \\]
 It connects differentiation and integration, showing that differentiation reverses integration and vice versa.
 

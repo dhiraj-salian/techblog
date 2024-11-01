@@ -13,7 +13,7 @@ A **vector** is an ordered list of numbers. Vectors represent various elements i
 
 ### Vector Example:
 \\[
-\mathbf{v} = \begin{bmatrix} 3 \\\\ 4 \end{bmatrix}
+\\mathbf{v} = \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}
 \\]
 
 ### Operations on Vectors:
@@ -22,14 +22,14 @@ A **vector** is an ordered list of numbers. Vectors represent various elements i
 
     You can add two vectors element-wise.
     \\[
-    \mathbf{a} + \mathbf{b} = \begin{bmatrix} a_1 \\\\ a_2 \end{bmatrix} + \begin{bmatrix} b_1 \\\\ b_2 \end{bmatrix} = \begin{bmatrix} a_1 + b_1 \\\\ a_2 + b_2 \end{bmatrix}
+    \\mathbf{a} + \\mathbf{b} = \\begin{bmatrix} a_1 \\\\ a_2 \\end{bmatrix} + \\begin{bmatrix} b_1 \\\\ b_2 \\end{bmatrix} = \\begin{bmatrix} a_1 + b_1 \\\\ a_2 + b_2 \\end{bmatrix}
     \\]
 
 2. **Scalar Multiplication**:
 
     Multiply a vector by a scalar (single number) by multiplying each element by the scalar.
     \\[
-    c \mathbf{v} = c \begin{bmatrix} v_1 \\\\ v_2 \end{bmatrix} = \begin{bmatrix} c v_1 \\\\ c v_2 \end{bmatrix}
+    c \\mathbf{v} = c \\begin{bmatrix} v_1 \\\\ v_2 \\end{bmatrix} = \\begin{bmatrix} c v_1 \\\\ c v_2 \\end{bmatrix}
     \\]
 
 ## 1.1.2 Matrices
@@ -38,7 +38,7 @@ A **matrix** is a rectangular array of numbers that can represent transformation
 
 ### Matrix Example:
 \\[
-W = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}
+W = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}
 \\]
 
 ### Matrix Operations:
@@ -47,19 +47,19 @@ W = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}
     
     This operation is used in neural networks to transform input vectors using weight matrices.
     \\[
-    \mathbf{y} = W \mathbf{x}
+    \\mathbf{y} = W \\mathbf{x}
     \\]
     Where:
     - \\(W\\) is the matrix,
-    - \\(\mathbf{x}\\) is the input vector,
-    - \\(\mathbf{y}\\) is the output vector.
+    - \\(\\mathbf{x}\\) is the input vector,
+    - \\(\\mathbf{y}\\) is the output vector.
 
     **Example**:
     \\[
-    W = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}, \quad \mathbf{x} = \begin{bmatrix} 3 \\\\ 4 \end{bmatrix}
+    W = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, \\quad \\mathbf{x} = \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}
     \\]
     \\[
-    W \mathbf{x} = \begin{bmatrix} 1 \cdot 3 + 2 \cdot 4 \\\\ 3 \cdot 3 + 4 \cdot 4 \end{bmatrix} = \begin{bmatrix} 11 \\\\ 25 \end{bmatrix}
+    W \\mathbf{x} = \\begin{bmatrix} 1 \\cdot 3 + 2 \\cdot 4 \\\\ 3 \\cdot 3 + 4 \\cdot 4 \\end{bmatrix} = \\begin{bmatrix} 11 \\\\ 25 \\end{bmatrix}
     \\]
 
 2. **Matrix-Matrix Multiplication**:
@@ -75,13 +75,13 @@ The **dot product** between two vectors produces a scalar value and is often use
 
 ### Dot Product Formula:
 \\[
-\mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2 + \cdots + a_n b_n = \sum_{i=1}^n a_i b_i
+\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + \\cdots + a_n b_n = \\sum_{i=1}^n a_i b_i
 \\]
 
 ### Dot Product Example:
-For \\(\mathbf{a} = [1, 2, 3]\\) and \\(\mathbf{b} = [4, 5, 6]\\):
+For \\(\\mathbf{a} = [1, 2, 3]\\) and \\(\\mathbf{b} = [4, 5, 6]\\):
 \\[
-\mathbf{a} \cdot \mathbf{b} = 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6 = 4 + 10 + 18 = 32
+\\mathbf{a} \\cdot \\mathbf{b} = 1 \\cdot 4 + 2 \\cdot 5 + 3 \\cdot 6 = 4 + 10 + 18 = 32
 \\]
 
 ## 1.1.4 Norms and Distance
@@ -91,19 +91,19 @@ The **norm** of a vector measures its magnitude (or length), while the **distanc
 ### L2 Norm (Euclidean Norm):
 The **L2 norm** measures the magnitude of a vector:
 \\[
-||\mathbf{v}||_2 = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}
+||\\mathbf{v}||_2 = \\sqrt{v_1^2 + v_2^2 + \\cdots + v_n^2}
 \\]
 
 ### Distance Between Vectors:
-The **distance** between two vectors \\(\mathbf{a}\\) and \\(\mathbf{b}\\) is:
+The **distance** between two vectors \\(\\mathbf{a}\\) and \\(\\mathbf{b}\\) is:
 \\[
-d(\mathbf{a}, \mathbf{b}) = ||\mathbf{a} - \mathbf{b}||_2
+d(\\mathbf{a}, \\mathbf{b}) = ||\\mathbf{a} - \\mathbf{b}||_2
 \\]
 
 ### Example:
-If \\(\mathbf{a} = [1, 2]\\) and \\(\mathbf{b} = [3, 4]\\), the distance is:
+If \\(\\mathbf{a} = [1, 2]\\) and \\(\\mathbf{b} = [3, 4]\\), the distance is:
 \\[
-d(\mathbf{a}, \mathbf{b}) = \sqrt{(1 - 3)^2 + (2 - 4)^2} = \sqrt{4 + 4} = \sqrt{8} \approx 2.83
+d(\\mathbf{a}, \\mathbf{b}) = \\sqrt{(1 - 3)^2 + (2 - 4)^2} = \\sqrt{4 + 4} = \\sqrt{8} \\approx 2.83
 \\]
 
 ## Working with Vectors and Matrices in Python
