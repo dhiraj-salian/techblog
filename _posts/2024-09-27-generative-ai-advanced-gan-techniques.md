@@ -14,24 +14,28 @@ In this step, we will explore advanced variants of **GANs** that address some li
 **Conditional GANs (cGANs)** extend the basic GAN architecture by conditioning both the **generator** and **discriminator** on additional information. For example, you can condition the GAN on **class labels**, which allows you to generate specific types of data (e.g., images of cats, dogs, or cars).
 
 ### How it Works:
-- **Generator**: The generator takes both the noise vector \\( z \\) and a class label \\( y \\) as input, and it generates data that corresponds to the given class.
-- **Discriminator**: The discriminator takes both the real or generated data and the class label \\( y \\) as input, and it tries to determine whether the data is real or fake given the class label.
+- **Generator**: The generator takes both the noise vector $$ z $$ and a class label $$ y $$ as input, and it generates data that corresponds to the given class.
+- **Discriminator**: The discriminator takes both the real or generated data and the class label $$ y $$ as input, and it tries to determine whether the data is real or fake given the class label.
 
 ### Objective:
 The generator aims to generate data that not only fools the discriminator but also matches the desired class label. The discriminator tries to identify whether the data is real or fake, taking into account the class label.
 
 ### cGAN Loss Functions:
 1. **Generator Loss**:
-   \\[
-   \\mathcal{L}_G = -\\log(D(G(z|y)|y))
-   \\]
-   Here, \\( G(z|y) \\) is the generated data conditioned on label \\( y \\), and \\( D(G(z|y)|y) \\) is the discriminator’s output for the generated data conditioned on label \\( y \\).
+
+   $$
+   \mathcal{L}_G = -\log(D(G(z|y)|y))
+   $$
+
+   Here, $$G(z\\|y)$$ is the generated data conditioned on label $$y$$, and $$D(G(z\\|y)\\|y)$$ is the discriminator’s output for the generated data conditioned on label $$y$$.
 
 2. **Discriminator Loss**:
-   \\[
-   \\mathcal{L}_D = -\\left[ \\log(D(x|y)) + \\log(1 - D(G(z|y)|y)) \\right]
-   \\]
-   Here, \\( D(x|y) \\) is the discriminator’s output for real data \\( x \\) conditioned on label \\( y \\), and \\( G(z|y) \\) is the fake data.
+
+   $$
+   \mathcal{L}_D = -\left[ \log(D(x|y)) + \log(1 - D(G(z|y)|y)) \right]
+   $$
+
+   Here, $$D(x\\|y)$$ is the discriminator’s output for real data $$x$$ conditioned on label $$y$$, and $$G(z\\|y)$$ is the fake data.
 
 ### Implementing a cGAN with PyTorch
 
@@ -176,15 +180,19 @@ class DCGANDiscriminator(nn.Module):
 
 ### Key Features:
 1. **Wasserstein Loss**: 
-- The WGAN uses the Wasserstein distance to provide better feedback to the generator.
-- Loss for the discriminator:
-$$
-L_D = -\mathbb{E}_{x \sim \text{data}}[D(x)] + \mathbb{E}_{z \sim \text{noise}}[D(G(z))]
-$$
-- Loss for the generator:
-$$
-L_G = -\mathbb{E}_{z \sim \text{noise}}[D(G(z))]
-$$
+    - The WGAN uses the Wasserstein distance to provide better feedback to the generator.
+    - Loss for the discriminator:
+
+    $$
+    L_D = -\mathbb{E}_{x \sim \operatorname{data}}[D(x)] + \mathbb{E}_{z \sim \operatorname{noise}}[D(G(z))]
+    $$
+
+    - Loss for the generator:
+
+    $$
+    L_G = -\mathbb{E}_{z \sim \text{noise}}[D(G(z))]
+    $$
+
 2. **Clipping Weights** : WGANs clip the weights of the discriminator to ensure the Lipschitz continuity condition is met.
 3. **No Sigmoid in the Discriminator**: The discriminator outputs a real number instead of a probability, which represents how real the data looks.
 

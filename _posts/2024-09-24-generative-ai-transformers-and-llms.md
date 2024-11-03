@@ -18,12 +18,14 @@ The transformer is a deep learning architecture designed to process sequences of
    - It computes a weighted sum of all input tokens, where the weights (or "attention scores") represent the importance of each token relative to others.
 
    **Formula**:
-   \\[
-   \\text{Attention}(Q, K, V) = \\text{softmax}\\left( \\frac{QK^T}{\\sqrt{d_k}} \\right) V
-   \\]
-   Where:
-   - \\(Q\\) (Query), \\(K\\) (Key), and \\(V\\) (Value) are matrices representing the input tokens.
-   - \\(d_k\\) is the dimension of the key vectors.
+   
+      $$
+      \text{Attention}(Q, K, V) = \text{softmax}\left( \frac{QK^T}{\sqrt{d_k}} \right) V
+      $$
+   
+      Where:
+      - $$Q$$ (Query), $$K$$ (Key), and $$V$$ (Value) are matrices representing the input tokens.
+      - $$d_k$$ is the dimension of the key vectors.
 
 2. **Multi-Head Attention**:
    - Instead of a single attention function, the transformer uses multiple attention heads to focus on different parts of the input. Each attention head operates independently, and their outputs are combined.

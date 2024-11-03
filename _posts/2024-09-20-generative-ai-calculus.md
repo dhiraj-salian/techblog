@@ -13,23 +13,26 @@ A **derivative** measures how a function changes as its input changes. In machin
 
 ### Derivative of a Simple Function:
 
-Given a function \\(f(x)\\), the derivative of \\(f\\) with respect to \\(x\\), denoted as \\(f'(x)\\) or \\(\\frac{df}{dx}\\), tells us the rate of change of \\(f(x)\\) at any point \\(x\\).
+Given a function $$f(x)$$, the derivative of $$f$$ with respect to $$x$$, denoted as $$f'(x)$$ or $$\frac{df}{dx}$$, tells us the rate of change of $$f(x)$$ at any point $$x$$.
 
 ### Example:
-For the function \\(f(x) = x^2\\), the derivative is:
-\\[
-f'(x) = \\frac{d}{dx}(x^2) = 2x
-\\]
-This means that for any value of \\(x\\), the rate of change of \\(f(x)\\) is \\(2x\\).
+For the function $$f(x) = x^2$$, the derivative is:
+
+$$
+f'(x) = \frac{d}{dx}(x^2) = 2x
+$$
+
+This means that for any value of $$x$$, the rate of change of $$f(x)$$ is $$2x$$.
 
 ### Partial Derivatives:
 
 When working with functions of multiple variables (e.g., neural networks with many weights), we compute **partial derivatives**. A partial derivative shows how a function changes with respect to one variable, keeping the others constant.
 
-For example, for the function \\(f(x, y) = 3x^2 + 2y\\), the partial derivatives are:
-\\[
-\\frac{\\partial f}{\\partial x} = 6x, \\quad \\frac{\\partial f}{\\partial y} = 2
-\\]
+For example, for the function $$f(x, y) = 3x^2 + 2y$$, the partial derivatives are:
+
+$$
+\frac{\partial f}{\partial x} = 6x, \quad \frac{\partial f}{\partial y} = 2
+$$
 
 ## 1.2.2 Gradients
 
@@ -37,17 +40,19 @@ A **gradient** is a vector that contains all the partial derivatives of a functi
 
 ### Gradient Formula:
 
-If \\(f\\) is a function of multiple variables \\(x_1, x_2, \\dots, x_n\\), the gradient is the vector of partial derivatives:
-\\[
-\\nabla f(x_1, x_2, \\dots, x_n) = \\begin{bmatrix} \\frac{\\partial f}{\\partial x_1} \\\\ \\frac{\\partial f}{\\partial x_2} \\\\ \\vdots \\\\ \\frac{\\partial f}{\\partial x_n} \\end{bmatrix}
-\\]
+If $$f$$ is a function of multiple variables $$x_1, x_2, \dots, x_n$$, the gradient is the vector of partial derivatives:
+
+$$
+\nabla f(x_1, x_2, \dots, x_n) = \begin{bmatrix} \frac{\partial f}{\partial x_1} \\ \frac{\partial f}{\partial x_2} \\ \vdots \\ \frac{\partial f}{\partial x_n} \end{bmatrix}
+$$
 
 ### Example:
 
-For the function \\(f(x, y) = 3x^2 + 2y\\), the gradient is:
-\\[
-\\nabla f(x, y) = \\begin{bmatrix} \\frac{\\partial f}{\\partial x} \\\\ \\frac{\\partial f}{\\partial y} \\end{bmatrix} = \\begin{bmatrix} 6x \\\\ 2 \\end{bmatrix}
-\\]
+For the function $$f(x, y) = 3x^2 + 2y$$, the gradient is:
+
+$$
+\nabla f(x, y) = \begin{bmatrix} \frac{\partial f}{\partial x} \\ \frac{\partial f}{\partial y} \end{bmatrix} = \begin{bmatrix} 6x \\ 2 \end{bmatrix}
+$$
 
 In neural networks, the gradient of the **loss function** with respect to the weights is computed during **backpropagation** to update the weights in the direction that minimizes the loss.
 
@@ -57,20 +62,22 @@ The **chain rule** is used to compute the derivative of a composite function, i.
 
 ### Chain Rule Formula:
 
-If \\(f(g(x))\\) is a composite function, the chain rule states:
-\\[
-\\frac{d}{dx} f(g(x)) = f'(g(x)) \\cdot g'(x)
-\\]
+If $$f(g(x))$$ is a composite function, the chain rule states:
+
+$$
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+$$
 
 ### Example:
 
-Let’s say \\(f(x) = (2x + 3)^2\\). To compute the derivative using the chain rule:
-- Let \\(g(x) = 2x + 3\\), and \\(f(g(x)) = g(x)^2\\).
-- First, compute \\(f'(g(x)) = 2g(x)\\) and \\(g'(x) = 2\\).
+Let’s say $$f(x) = (2x + 3)^2$$. To compute the derivative using the chain rule:
+- Let $$g(x) = 2x + 3$$, and $$f(g(x)) = g(x)^2$$.
+- First, compute $$f'(g(x)) = 2g(x)$$ and $$g'(x) = 2$$.
 - Applying the chain rule:
-\\[
-\\frac{d}{dx}(2x + 3)^2 = 2(2x + 3) \\cdot 2 = 4(2x + 3)
-\\]
+
+$$
+\frac{d}{dx}(2x + 3)^2 = 2(2x + 3) \cdot 2 = 4(2x + 3)
+$$
 
 In neural networks, the chain rule is used to compute the gradients during **backpropagation**, where the gradient of the loss with respect to earlier layers depends on the gradients of later layers.
 
@@ -80,20 +87,23 @@ In neural networks, the chain rule is used to compute the gradients during **bac
 
 ### Gradient Descent Update Rule:
 
-For a function \\(f\\) with respect to a parameter \\(w\\), the weight update rule is:
-\\[
-w = w - \\eta \\cdot \\nabla f(w)
-\\]
+For a function $$f$$ with respect to a parameter $$w$$, the weight update rule is:
+
+$$
+w = w - \eta \cdot \nabla f(w)
+$$
+
 Where:
-- \\(w\\) is the weight,
-- \\(\\eta\\) is the **learning rate** (a small step size),
-- \\(\\nabla f(w)\\) is the gradient of the loss function with respect to \\(w\\).
+- $$w$$ is the weight,
+- $$\eta$$ is the **learning rate** (a small step size),
+- $$\nabla f(w)$$ is the gradient of the loss function with respect to $$w$$.
 
 ### Example:
-If the gradient of the loss function is \\(\\nabla f(w) = 0.5\\) and the learning rate is \\(\\eta = 0.1\\), the weight update would be:
-\\[
-w_{\\text{new}} = w_{\\text{old}} - 0.1 \\cdot 0.5 = w_{\\text{old}} - 0.05
-\\]
+If the gradient of the loss function is $$\nabla f(w) = 0.5$$ and the learning rate is $$\eta = 0.1$$, the weight update would be:
+
+$$
+w_{\text{new}} = w_{\text{old}} - 0.1 \cdot 0.5 = w_{\text{old}} - 0.05
+$$
 
 ## 1.2.5 Backpropagation
 
@@ -107,7 +117,7 @@ w_{\\text{new}} = w_{\\text{old}} - 0.1 \\cdot 0.5 = w_{\\text{old}} - 0.05
 
 ## Derivatives and Gradient Descent in Python
 
-Here’s a simple implementation to compute derivatives and perform gradient descent on a quadratic function \\(f(x) = x^2\\).
+Here’s a simple implementation to compute derivatives and perform gradient descent on a quadratic function $$f(x) = x^2$$.
 
 ### Python Code:
 ```python

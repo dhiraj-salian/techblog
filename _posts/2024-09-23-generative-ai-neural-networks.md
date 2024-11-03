@@ -29,19 +29,22 @@ Activation functions introduce non-linearity into the network, allowing it to le
 
 #### Common Activation Functions:
 1. **ReLU (Rectified Linear Unit)**:
-   \\[
-   \\text{ReLU}(z) = \\max(0, z)
-   \\]
+   
+   $$
+   \text{ReLU}(z) = \max(0, z)
+   $$
 
 2. **Sigmoid**:
-   \\[
-   \\sigma(z) = \\frac{1}{1 + e^{-z}}
-   \\]
+   
+   $$
+   \sigma(z) = \frac{1}{1 + e^{-z}}
+   $$
 
 3. **Tanh**:
-   \\[
-   \\text{tanh}(z) = \\frac{e^z - e^{-z}}{e^z + e^{-z}}
-   \\]
+   
+   $$
+   \text{tanh}(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
+   $$
 
 ## 2.2 Forward Propagation
 
@@ -49,17 +52,17 @@ In **forward propagation**, data moves through the layers of the network from th
 
 ### Mathematics of Forward Propagation:
 
-For a layer with input \\(\\mathbf{x}\\), weights \\(\\mathbf{W}\\), and bias \\(\\mathbf{b}\\), the linear output is:
+For a layer with input $$\mathbf{x}$$, weights $$\mathbf{W}$$, and bias $$\mathbf{b}$$, the linear output is:
 
-\\[
-z = \\mathbf{W} \\cdot \\mathbf{x} + \\mathbf{b}
-\\]
+$$
+z = \mathbf{W} \cdot \mathbf{x} + \mathbf{b}
+$$
 
-Then, the activation function \\(\\sigma(z)\\) is applied:
+Then, the activation function $$\sigma(z)$$ is applied:
 
-\\[
-a = \\sigma(z)
-\\]
+$$
+a = \sigma(z)
+$$
 
 This process repeats for each layer, where the output of one layer becomes the input to the next.
 
@@ -69,15 +72,19 @@ The **loss function** measures the difference between the predicted output and t
 
 ### Common Loss Functions:
 1. **Mean Squared Error (MSE)** for regression:
-   \\[
-   \\text{MSE} = \\frac{1}{n} \\sum_{i=1}^n (y_i - \\hat{y}_i)^2
-   \\]
+
+    $$
+    \text{MSE} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2
+    $$
+
 2. **Cross-Entropy Loss** for classification:
-   \\[
-   \\text{Loss} = -\\sum_{i=1}^n y_i \\log(\\hat{y}_i)
-   \\]
-Where:
-- \\(y_i\\) is the true label, and \\(\\hat{y}_i\\) is the predicted probability.
+   
+    $$
+    \text{Loss} = -\sum_{i=1}^n y_i \log(\hat{y}_i)
+    $$
+
+    Where:
+    - $$y_i$$ is the true label, and $$\hat{y}_i$$ is the predicted probability.
 
 ## 2.4 Backpropagation
 
