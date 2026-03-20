@@ -2,7 +2,8 @@
 layout: single
 title:  "Generative AI 1.1: Linear Algebra"
 date:   2024-09-19
-categories: artificial-intelligence
+categories: [deep-learning]
+tags: [linear-algebra, mathematics, foundations, generative-ai]
 ---
 
 Linear algebra is the foundation of machine learning and neural networks. In particular, **vectors** and **matrices** are used to represent and manipulate data, weights, and transformations within these models.

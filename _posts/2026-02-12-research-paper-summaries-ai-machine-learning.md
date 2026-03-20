@@ -2,7 +2,8 @@
 layout: single
 title: "Research Paper Summaries: AI & Machine Learning Breakthroughs"
 date: 2026-02-12
-categories: research
+categories: [research]
+tags: [research, papers, machine-learning, deep-learning, nlp, cv]
 ---
 
 # Research Paper Summaries: AI & Machine Learning Breakthroughs

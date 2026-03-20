@@ -2,7 +2,8 @@
 layout: single
 title:  "Arrange GameObjects randomly in Unity"
 date:   2022-02-13
-categories: unity
+categories: [programming]
+tags: [unity, game-development, c#, tutorial]
 ---
 
 In this blog, we will learn how to randomly arrange objects within the screen boundaries

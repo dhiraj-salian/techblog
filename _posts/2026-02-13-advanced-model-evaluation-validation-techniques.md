@@ -2,7 +2,8 @@
 layout: single
 title: "Advanced Model Evaluation & Validation Techniques"
 date: 2026-02-13
-categories: machine-learning
+categories: [machine-learning]
+tags: [machine-learning, evaluation, validation, model-selection, cross-validation]
 ---
 
 # Advanced Model Evaluation & Validation Techniques

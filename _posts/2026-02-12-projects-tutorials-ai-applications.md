@@ -2,7 +2,8 @@
 layout: single
 title: "Projects & Tutorials: Build Real AI Applications"
 date: 2026-02-12
-categories: projects
+categories: [projects]
+tags: [projects, tutorials, machine-learning, deep-learning, portfolio]
 ---
 
 # Projects & Tutorials: Build Real AI Applications

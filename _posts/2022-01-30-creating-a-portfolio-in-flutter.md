@@ -2,7 +2,8 @@
 layout: single
 title:  "Creating a Portfolio in Flutter"
 date:   2022-01-30
-categories: flutter
+categories: [programming]
+tags: [flutter, mobile-development, portfolio, dart]
 ---
 
 In this blog, we will learn to create flutter widgets for our portfolio.

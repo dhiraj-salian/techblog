@@ -2,7 +2,8 @@
 layout: single
 title:  "Generative AI 1.2: Calculus"
 date:   2024-09-20
-categories: artificial-intelligence
+categories: [deep-learning]
+tags: [calculus, mathematics, foundations, generative-ai]
 ---
 
 Calculus plays a fundamental role in machine learning, especially in training neural networks. During training, the network adjusts its parameters (weights and biases) to minimize a loss function. This process is made possible by computing **derivatives** (rates of change), which tell us how small changes in inputs affect the output.

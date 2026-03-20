@@ -2,7 +2,8 @@
 layout: single
 title:  "Generative AI 1.3: Probability and Statistics"
 date:   2024-09-21
-categories: artificial-intelligence
+categories: [deep-learning]
+tags: [probability, statistics, mathematics, foundations, generative-ai]
 ---
 
 In machine learning and generative AI, probability is used to model uncertainty and randomness, while statistics helps us make inferences about data. These concepts are foundational for understanding how models make predictions, how we can measure uncertainty, and how models like **VAEs** and **GANs** work.

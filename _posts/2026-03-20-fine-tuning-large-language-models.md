@@ -1,8 +1,9 @@
 ---
+layout: single
 title: "Fine-tuning Large Language Models: Best Practices and Techniques"
 date: 2026-03-20
-categories: [advanced]
-tags: [llm, machine-learning, fine-tuning, peft, lora]
+categories: [deep-learning]
+tags: [llm, machine-learning, fine-tuning, peft, lora, gpt, bert]
 ---
 
 Fine-tuning Large Language Models (LLMs) has become essential for adapting pre-trained models to specific tasks and domains. In this guide, we'll explore the best practices and techniques for effective LLM fine-tuning in 2024.

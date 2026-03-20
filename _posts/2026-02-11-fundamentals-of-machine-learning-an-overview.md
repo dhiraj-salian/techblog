@@ -2,7 +2,8 @@
 layout: single
 title:  "Fundamentals of Machine Learning: An Overview"
 date:   2026-02-11
-categories: machine-learning
+categories: [machine-learning]
+tags: [machine-learning, ai, fundamentals, supervised-learning, unsupervised-learning]
 ---
 
 

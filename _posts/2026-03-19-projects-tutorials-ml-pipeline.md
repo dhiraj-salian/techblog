@@ -1,15 +1,9 @@
 ---
+layout: single
 title: "Building Your First End-to-End ML Pipeline"
 date: 2026-03-19
-categories:
-  - projects
-  - machine-learning
-tags:
-  - ml
-  - pipeline
-  - tutorial
-  - python
-  - scikit-learn
+categories: [projects]
+tags: [machine-learning, pipeline, mlops, projects, tutorial, python, scikit-learn]
 ---
 
 # Building Your First End-to-End ML Pipeline

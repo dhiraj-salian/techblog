@@ -2,7 +2,8 @@
 layout: single
 title:  "Generative AI 6: Advanced GAN Techniques"
 date:   2024-09-27
-categories: artificial-intelligence
+categories: [deep-learning]
+tags: [gan, advanced-gan, generative-models, generative-ai]
 ---
 
 In this step, we will explore advanced variants of **GANs** that address some limitations of the basic GAN architecture, such as unstable training and lack of control over generated samples. These techniques make GANs more powerful and adaptable for real-world applications, especially in generating high-quality images, videos, and other data.

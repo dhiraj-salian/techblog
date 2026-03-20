@@ -2,7 +2,8 @@
 layout: single
 title:  "Generative AI 9: Advanced Customizations and Techniques with Stable Diffusion"
 date:   2024-10-02
-categories: artificial-intelligence
+categories: [deep-learning]
+tags: [stable-diffusion, diffusion-models, generative-models, generative-ai, image-generation]
 ---
 
 In this step, we’ll explore how to fine-tune **Stable Diffusion** models on custom datasets, enhance the quality of generated images using **upscalers**, and how to apply **ControlNet** to gain more control over the image generation process. These techniques allow you to customize Stable Diffusion for specific tasks and improve the quality of outputs.

@@ -2,7 +2,8 @@
 layout: single
 title:  "Generative AI 1.4: Optimization Techniques"
 date:   2024-09-22
-categories: artificial-intelligence
+categories: [deep-learning]
+tags: [optimization, mathematics, generative-ai]
 ---
 
 Optimization refers to the process of finding the best parameters for a model to minimize (or maximize) some objective function, typically the **loss function** in machine learning. The most commonly used optimization techniques in machine learning involve **gradient-based** methods like **Gradient Descent**.

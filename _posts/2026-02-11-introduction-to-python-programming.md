@@ -2,7 +2,8 @@
 layout: single
 title:  "Introduction to Python Programming"
 date:   2026-02-11
-categories: python-programming
+categories: [python-programming]
+tags: [python, programming, basics, beginners]
 ---
 
 

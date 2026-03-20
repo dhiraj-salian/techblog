@@ -2,7 +2,8 @@
 layout: single
 title:  "Generative AI 2: Neural Networks"
 date:   2024-09-23
-categories: artificial-intelligence
+categories: [deep-learning]
+tags: [neural-networks, deep-learning, pytorch, generative-ai]
 ---
 
 A **neural network** is a computational model inspired by the way biological neural networks work. It is composed of layers of neurons (nodes), which are connected by **weights**. Neural networks are used to approximate complex functions and learn patterns from data through training.

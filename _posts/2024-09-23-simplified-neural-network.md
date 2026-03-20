@@ -2,7 +2,8 @@
 layout: single
 title: "Simple Neural Network in Python with Math behind it"
 date: 2024-09-23
-categories: artificial-intelligence
+categories: [deep-learning]
+tags: [neural-networks, deep-learning, python, mathematics]
 ---
 
 Neural networks are one of the most powerful tools in machine learning, capable of recognizing patterns, classifying images, and even generating text. But what exactly is happening inside them? In this blog, we'll walk through a simple neural network example in Python and explore the detailed math behind each step in an approachable way.

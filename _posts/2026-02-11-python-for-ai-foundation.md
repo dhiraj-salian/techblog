@@ -2,7 +2,8 @@
 layout: single
 title: "Python for AI: Building Your Foundation"
 date: 2026-02-11
-categories: programming
+categories: [python-programming]
+tags: [python, programming, ai, machine-learning, foundations]
 ---
 
 # Python for AI: Building Your Foundation

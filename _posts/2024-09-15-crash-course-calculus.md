@@ -2,7 +2,8 @@
 layout: single
 title:  "Crash Course: Calculus"
 date:   2024-09-15
-categories: mathematics
+categories: [deep-learning]
+tags: [calculus, mathematics, foundations, machine-learning]
 ---
 
 Calculus is a branch of mathematics focused on **change** (differentiation) and **accumulation** (integration). It is divided into **differential calculus** and **integral calculus**.
