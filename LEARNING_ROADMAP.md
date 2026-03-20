@@ -9,10 +9,26 @@
 - **Repository**: dhiraj-salian/techblog
 
 ### Current Content Overview
-**Total Posts**: 15 articles
+**Total Posts**: 24 articles
 
 #### Content Distribution:
-1. **Generative AI Series** (12 posts) - Excellent coverage
+1. **Python Programming** (2 posts)
+   - Introduction to Python Programming
+   - Python for AI: Building Your Foundation
+
+2. **Machine Learning** (3 posts)
+   - Fundamentals of Machine Learning: An Overview
+   - Advanced Model Evaluation & Validation Techniques
+   - Fine-tuning Large Language Models
+
+3. **Research Paper Summaries** (1 post)
+   - AI & Machine Learning Breakthroughs
+
+4. **Projects & Tutorials** (2 posts)
+   - Build Real AI Applications
+   - Building Your First End-to-End ML Pipeline
+
+5. **Deep Learning / Generative AI** (14 posts)
    - Mathematical foundations (Linear Algebra, Calculus, Probability & Statistics)
    - Neural Networks & Optimization
    - Transformers & LLMs
@@ -20,16 +36,19 @@
    - GANs & Advanced GAN techniques
    - Retrieval Augmented Generation
    - Diffusion Models & Stable Diffusion
-   - Advanced customizations with Stable Diffusion
 
-2. **Mathematics** (1 post)
-   - Calculus crash course
-
-3. **Mobile Development** (1 post)
+6. **Programming** (2 posts - archived)
    - Flutter portfolio creation
+   - Unity game development
 
-4. **Game Development** (1 post)
-   - Unity game object arrangement
+### Weekly Content Schedule (Mon-Fri)
+| Day | Category | Content Focus |
+|-----|----------|---------------|
+| Monday | Python Programming | Python basics → advanced concepts for AI/ML |
+| Tuesday | Machine Learning | ML fundamentals → classical algorithms |
+| Wednesday | Research Paper Summaries | Latest AI/ML research papers |
+| Thursday | Projects & Tutorials | Hands-on implementations |
+| Friday | Deep Learning | Neural networks → advanced topics |
 
 ### Content Quality Assessment
 - **✅ Strengths**: 
@@ -37,13 +56,14 @@
   - Well-structured posts with code examples
   - Progressive learning approach
   - Mathematical foundations included
+  - Consistent formatting (categories & tags)
 
 - **❌ Gaps**:
-  - Missing foundational ML/DL content
-  - No Python programming basics
-  - Limited system design content
-  - No training/inference workflow posts
-  - Missing broader AI/ML context
+  - More Python content (OOP, data structures, pandas, numpy)
+  - Classical ML algorithms (SVM, Decision Trees, Random Forests, XGBoost)
+  - Computer Vision basics (CNNs)
+  - Sequence models (RNNs, LSTMs)
+  - More project tutorials
 
 ## Required Learning Roadmap: Beginner to PhD Level
 
@@ -133,24 +153,40 @@
 
 ## Content Gap Analysis
 
-### Immediate Gaps (Next 30 days)
-1. **Python Programming Series**
-   - Python basics for AI/ML
-   - Data manipulation with pandas/numpy
-   - Visualization with matplotlib/seaborn
-   - Scientific computing with scipy
+### Current Gaps by Schedule
 
-2. **Machine Learning Fundamentals**
-   - ML concepts & terminology
-   - Classical algorithms implementation
-   - Model evaluation & validation
-   - Cross-validation & hyperparameter tuning
+#### Monday (Python Programming) - Gaps:
+- Object-Oriented Programming (OOP) in Python
+- Data Structures (lists, dicts, sets, tuples)
+- Python decorators and generators
+- Pandas for data manipulation
+- NumPy for numerical computing
+- Matplotlib/Seaborn for visualization
 
-3. **Deep Learning Basics**
-   - Neural network fundamentals
-   - Framework comparisons (PyTorch vs TensorFlow)
-   - Implementation from scratch
-   - Practical exercises
+#### Tuesday (Machine Learning) - Gaps:
+- Classical ML algorithms (Decision Trees, SVM, Random Forests)
+- XGBoost and ensemble methods
+- Feature engineering techniques
+- Model hyperparameter tuning
+- More evaluation metrics
+
+#### Wednesday (Research) - OK:
+- Weekly research paper summaries (ongoing)
+
+#### Thursday (Projects) - Gaps:
+- More specific project tutorials
+- End-to-end project examples
+- Deployment tutorials
+- MLOps basics
+
+#### Friday (Deep Learning) - Gaps:
+- CNNs for Computer Vision
+- RNNs and LSTMs for sequences
+- Model optimization techniques
+- More practical implementations
+
+### Automated Content Generation
+The blog uses an automated cron job (8 AM daily) to generate content based on the schedule above. Topics are selected from the learning roadmap gaps to ensure comprehensive coverage.
 
 ### Medium-term Gaps (Next 90 days)
 1. **ML Engineering**
