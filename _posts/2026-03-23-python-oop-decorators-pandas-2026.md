@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Python OOP, Decorators, and Pandas: Best Practices for 2026"
-date:   2026-03-22
+date:   2026-03-23
 categories: [python]
 tags: [python, oop, decorators, pandas, data-science, best-practices]
 ---
