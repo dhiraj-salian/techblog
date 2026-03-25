@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Small Language Models: The Future of Agentic AI"
 date: 2026-03-25
 categories: [research-papers, ai, machine-learning]
