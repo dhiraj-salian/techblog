@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Small Language Models: The Future of Agentic AI"
-date: 2026-03-25 08:00:00
+date: 2026-03-25
 categories: [research-papers, ai, machine-learning]
 tags: [SLM, agentic-ai, language-models, ai-agents]
 image: /assets/images/slm-agentic-ai.jpg
