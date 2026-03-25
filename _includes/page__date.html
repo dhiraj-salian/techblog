@@ -1,0 +1,5 @@
+{% if page.date %}
+  <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+{% elsif page.last_modified_at %}
+  <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%B %-d, %Y" }}</time>
+{% endif %}
