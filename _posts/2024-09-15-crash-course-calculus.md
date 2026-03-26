@@ -1,133 +1,97 @@
 ---
 layout: single
-title:  "Crash Course: Calculus"
+title:  "Crash Course: Calculus for Machine Learning"
 date:   2024-09-15
 categories: [deep-learning]
 tags: [calculus, mathematics, foundations, machine-learning]
+description: "Master the calculus concepts essential for understanding machine learning algorithms, from derivatives to integrals"
+author: Dhiraj Salian
 ---
 
-Calculus is a branch of mathematics focused on **change** (differentiation) and **accumulation** (integration). It is divided into **differential calculus** and **integral calculus**.
+# Calculus for Machine Learning
 
-## 1. Differential Calculus
+> Every machine learning algorithm, from simple linear regression to deep neural networks, boils down to one core concept: optimization. And optimization is calculus in action.
 
-### Goal:
+If you're serious about understanding how machine learning works at a fundamental level, calculus is non-negotiable. It's the language that allows models to learn from data.
 
-Understand how things change.
+This guide covers the calculus concepts you'll encounter repeatedly in ML.
 
-### Key Concept: 
-**Derivative** - A derivative measures the rate of change of a function with respect to one of its variables.
+## Differential Calculus: The Mathematics of Change
 
-### Notation:
-If $$ y = f(x) $$, the derivative of $$ y $$ with respect to $$ x $$ is written as:
+### What It Is
 
-$$
-\frac{dy}{dx} \quad \text{or} \quad f'(x)
-$$
+Differential calculus deals with **rates of change**. In ML, this translates directly to:
+- How fast a loss function is decreasing
+- The direction to adjust weights to minimize error
+- Finding optimal values (maxima and minima)
 
-This gives the slope of the function at any point $$ x $$.
+### The Derivative
 
-### Basic Rules:
-  - **Constant Rule**: The derivative of a constant is zero.
+The derivative measures how a function changes as its input changes.
 
-  $$
-  \frac{d}{dx}(c) = 0
-  $$
-  
-  - **Power Rule**: The derivative of $$ x^n $$ is $$ nx^{n-1} $$.
-  
-  $$
-  \frac{d}{dx}(x^n) = nx^{n-1}
-  $$
-  
-  - **Sum Rule**: The derivative of a sum is the sum of the derivatives.
-  
-  $$
-  \frac{d}{dx}(f(x) + g(x)) = f'(x) + g'(x)
-  $$
-  
-  - **Product Rule**: The derivative of a product is:
-  
-  $$
-  \frac{d}{dx}(f(x)g(x)) = f'(x)g(x) + f(x)g'(x)
-  $$
-  
-  - **Quotient Rule**: The derivative of a quotient is:
-  
-  $$
-  \frac{d}{dx}\left(\frac{f(x)}{g(x)}\right) = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}
-  $$
-  
-  - **Chain Rule**: The derivative of a composite function is:
-  
-  $$
-  \frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)
-  $$
+If $y = f(x)$, the derivative is:
+$$\frac{dy}{dx} \quad \text{or} \quad f'(x)$$
 
-### Geometrically:
-The derivative gives the slope of the tangent line to the curve of $$ f(x) $$ at a specific point.
+This gives the **slope** of the function at any point—a critical piece of information for optimization.
 
-## 2. Integral Calculus
+### Essential Rules
 
-### Goal:
-Understand how to accumulate or total quantities over a range.
+**Power Rule**: The workhorse of differentiation
+$$\frac{d}{dx}(x^n) = nx^{n-1}$$
 
-### Key Concept: 
-**Integral** - An integral represents the area under a curve. It can be thought of as the reverse operation of differentiation.
+**Chain Rule**: For nested functions (common in deep networks)
+$$\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$$
 
-### Notation:
-The indefinite integral (anti-derivative) of $$ f(x) $$ with respect to $$ x $$ is written as:
+**Product Rule**: For functions multiplied together
+$$\frac{d}{dx}(f(x)g(x)) = f'(x)g(x) + f(x)g'(x)$$
 
-$$
-\int f(x) \, dx
-$$
+**Quotient Rule**: For divided functions
+$$\frac{d}{dx}\left(\frac{f(x)}{g(x)}\right) = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}$$
 
-The definite integral of $$ f(x) $$ from $$ a $$ to $$ b $$ is:
+### Geometric Interpretation
 
-$$
-\int_{a}^{b} f(x) \, dx
-$$
+The derivative gives the slope of the tangent line. In ML, this slope (or gradient) tells us which direction to move to minimize the loss function.
 
-This calculates the area under the curve from $$ x = a $$ to $$ x = b $$.
+## Integral Calculus: The Mathematics of Accumulation
 
-### Basic Rules:
-  - **Constant Rule**: The integral of a constant is:
+### What It Is
 
-    $$
-    \int c \, dx = cx + C
-    $$
-  
-    where $$ C $$ is the constant of integration.
-  - **Power Rule**: The integral of $$ x^n $$ is:
-  
-    $$
-    \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad \text{for} \, n \neq -1
-    $$
-  
-  - **Sum Rule**: The integral of a sum is the sum of the integrals.
+Integral calculus deals with **accumulation**—adding up quantities over intervals. In ML, it's used less frequently but appears in:
+- Probability distributions
+- Computing areas under ROC curves
+- Certain loss functions
 
-    $$
-    \int (f(x) + g(x)) \, dx = \int f(x) \, dx + \int g(x) \, dx
-    $$
+### The Integral
 
-### Fundamental Theorem of Calculus:
+The integral represents the area under a curve:
 
-$$
-\frac{d}{dx} \left( \int_{a}^{x} f(t) \, dt \right) = f(x)
-$$
+**Indefinite** (anti-derivative):
+$$\int f(x) \, dx$$
 
-It connects differentiation and integration, showing that differentiation reverses integration and vice versa.
+**Definite** (specific range):
+$$\int_{a}^{b} f(x) \, dx$$
 
-## 3. Applications of Calculus
+### Key Rules
 
-- **Differential Calculus** is used to:
-  - Find instantaneous rates of change (e.g., velocity, acceleration).
-  - Maximize or minimize functions (e.g., optimizing profits or efficiency).
+**Power Rule**:
+$$\int x^n \, dx = \frac{x^{n+1}}{n+1} + C$$
 
-- **Integral Calculus** is used to:
-  - Calculate areas under curves, volumes of solids.
-  - Accumulate quantities (e.g., total distance, mass, or charge over time or space).
+### The Fundamental Theorem
 
-## Summary:
-- **Derivative**: Measures how a function changes.
-- **Integral**: Measures how much a function accumulates.
-- **Key Rules**: Power rule, product rule, chain rule (for derivatives); power rule, sum rule (for integrals).
+$$\frac{d}{dx} \left( \int_{a}^{x} f(t) \, dt \right) f(x)$$
+
+This connects differentiation and integration—they're inverse operations.
+
+## Why This Matters in ML
+
+**Gradient Descent**: The core optimization algorithm uses derivatives to find the downhill direction.
+
+**Backpropagation**: Chain rule applied repeatedly to compute gradients in neural networks.
+
+**Loss Functions**: Many loss functions are integrals or involve integral concepts.
+
+**Regularization**: Some regularization terms come from integral-based penalties.
+
+## The Bottom Line
+
+Calculus isn't optional in ML—it's foundational. The concepts here will appear again and again as you advance. Master the derivatives first, then build to integrals.
