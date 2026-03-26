@@ -6,6 +6,10 @@ categories: [deep-learning]
 tags: [vae, autoencoder, generative-models, generative-ai]
 ---
 
+What if you could compress an image into a compact mathematical representation and then generate entirely new images from that representation? That's exactly what Variational Autoencoders do — and they're one of the most elegant approaches in generative AI.
+
+## VAE Architecture
+
 **Variational Autoencoders (VAEs)** are a type of generative model that learns a probability distribution over the latent space of the data and can generate new, realistic data from that distribution. VAEs are used in applications like image generation, data compression, and anomaly detection.
 
 ## 4.1 VAE Architecture

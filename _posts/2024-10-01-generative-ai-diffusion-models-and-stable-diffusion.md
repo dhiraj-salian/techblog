@@ -6,7 +6,7 @@ categories: [deep-learning]
 tags: [diffusion-models, stable-diffusion, generative-models, generative-ai]
 ---
 
-**Diffusion models** are a class of generative models that create data by learning the reverse process of data corruption. In the case of **text-to-image** generation models like **Stable Diffusion**, the model starts with random noise and iteratively refines it to generate an image based on a given text prompt. These models have gained popularity due to their ability to generate high-quality, diverse, and realistic images from text descriptions.
+What if you could create photorealistic images from pure text? That's exactly what diffusion models do — and Stable Diffusion made it accessible to everyone. These models work by learning the reverse process of data corruption: starting from random noise and iteratively refining it into a coherent image.
 
 ## 8.1 What are Diffusion Models?
 

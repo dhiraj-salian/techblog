@@ -6,7 +6,7 @@ categories: [deep-learning]
 tags: [llm, machine-learning, fine-tuning, peft, lora, gpt, bert]
 ---
 
-Fine-tuning Large Language Models (LLMs) has become essential for adapting pre-trained models to specific tasks and domains. In this guide, we'll explore the best practices and techniques for effective LLM fine-tuning in 2024.
+Why train a model from scratch when you can fine-tune an existing one? Fine-tuning lets you take models like Llama, Mistral, or GPT and adapt them for your specific use case — without spending millions on compute. This guide covers the best techniques: LoRA, QLoRA, full fine-tuning, and when to use each.
 
 ## Why Fine-tune?
 

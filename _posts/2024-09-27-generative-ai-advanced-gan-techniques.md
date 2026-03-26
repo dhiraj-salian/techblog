@@ -6,6 +6,10 @@ categories: [deep-learning]
 tags: [gan, advanced-gan, generative-models, generative-ai]
 ---
 
+Basic GANs are impressive, but they have limits — unstable training, no control over output, and challenges with image quality. In this article, we'll explore advanced GAN variants that solve these problems and enable real-world applications.
+
+## Advanced GAN Variants
+
 In this step, we will explore advanced variants of **GANs** that address some limitations of the basic GAN architecture, such as unstable training and lack of control over generated samples. These techniques make GANs more powerful and adaptable for real-world applications, especially in generating high-quality images, videos, and other data.
 
 ## 6.1 Conditional GANs (cGANs)

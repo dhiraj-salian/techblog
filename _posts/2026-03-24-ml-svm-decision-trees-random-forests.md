@@ -6,7 +6,7 @@ categories: [machine-learning]
 tags: [machine-learning, SVM, decision-trees, random-forests, classification, ensemble-learning]
 ---
 
-Welcome to today's machine learning deep dive! In 2026, these classic algorithms remain foundational for classification and regression tasks. Let's explore each one with practical implementation using scikit-learn.
+Neural networks get all the hype, but SVMs, Decision Trees, and Random Forests still dominate many real-world problems. They're faster, more interpretable, and often outperform deep learning on structured data. This post covers each algorithm: how they work, when to use them, and code examples with scikit-learn.
 
 ## Decision Trees: Intuitive Machine Learning
 

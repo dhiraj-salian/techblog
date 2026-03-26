@@ -6,6 +6,10 @@ categories: [deep-learning]
 tags: [gan, generative-models, generative-ai]
 ---
 
+It's a cat-and-mouse game between two neural networks — and that competition is what makes GANs so powerful. One network creates fake data, the other tries to spot the fakes. The result? Photorealistic images, deepfakes, and AI-generated art. Let's explore how this adversarial process works.
+
+## GAN Architecture
+
 **Generative Adversarial Networks (GANs)** are a type of generative model that consists of two neural networks: a **generator** and a **discriminator**. These two networks are trained simultaneously in a competitive process where the generator tries to create realistic data, and the discriminator tries to distinguish between real and fake data.
 
 ## 5.1 GAN Architecture

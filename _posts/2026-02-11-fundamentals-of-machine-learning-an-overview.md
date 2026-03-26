@@ -7,7 +7,7 @@ tags: [machine-learning, ai, fundamentals, supervised-learning, unsupervised-lea
 ---
 
 
-This post introduces the fundamental concepts of Machine Learning, providing a high-level overview of what ML is, its main types, and common applications.
+Machine Learning is the reason your email filters spam, your phone recognizes your face, and Netflix recommends what you'll watch next. But what exactly is ML, and how does it learn? This post covers the fundamentals — supervised, unsupervised, and reinforcement learning — with real-world examples.
 
 ## What is Machine Learning?
 Machine Learning (ML) is a subset of Artificial Intelligence (AI) that enables systems to learn from data, identify patterns, and make decisions with minimal human intervention. Instead of being explicitly programmed, ML models learn from data to improve their performance over time.

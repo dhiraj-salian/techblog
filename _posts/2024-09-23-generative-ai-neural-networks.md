@@ -6,6 +6,10 @@ categories: [deep-learning]
 tags: [neural-networks, deep-learning, pytorch, generative-ai]
 ---
 
+From recognizing faces in photos to generating art, neural networks are the driving force behind modern AI. But how do these layered mathematical structures actually learn? Let's unpack the architecture and mechanics that make it all possible.
+
+## What Is a Neural Network?
+
 A **neural network** is a computational model inspired by the way biological neural networks work. It is composed of layers of neurons (nodes), which are connected by **weights**. Neural networks are used to approximate complex functions and learn patterns from data through training.
 
 ## 2.1 Components of a Neural Network

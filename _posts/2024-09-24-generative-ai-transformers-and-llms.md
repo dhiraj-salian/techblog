@@ -6,6 +6,10 @@ categories: [deep-learning]
 tags: [transformers, llm, nlp, attention, generative-ai]
 ---
 
+Every time you chat with ChatGPT or generate code with AI, you're witnessing transformers in action. This architecture revolutionized natural language processing and spawned the era of Large Language Models. Let's dive into what makes transformers so powerful.
+
+## Transformer Architecture
+
 **Transformers** are the foundation of modern **Large Language Models (LLMs)** such as **GPT-3**, **BERT**, and **T5**. In this step, we will explore the transformer architecture, its components, and how it enables LLMs to process and generate human-like text. We will also learn about **tokenizers**, which are critical for preparing text data for transformer models.
 
 ## 3.1 Transformer Architecture

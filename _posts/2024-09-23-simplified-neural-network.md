@@ -6,7 +6,7 @@ categories: [deep-learning]
 tags: [neural-networks, deep-learning, python, mathematics]
 ---
 
-Neural networks are one of the most powerful tools in machine learning, capable of recognizing patterns, classifying images, and even generating text. But what exactly is happening inside them? In this blog, we'll walk through a simple neural network example in Python and explore the detailed math behind each step in an approachable way.
+Ever wondered what happens inside a neural network when it learns? It's not magic — it's just math. Forward pass, backward pass, matrix multiplication, gradients. In this post, we'll walk through a simple neural network in Python and trace every calculation step-by-step.
 
 ## What Is a Neural Network?
 

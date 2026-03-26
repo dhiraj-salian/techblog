@@ -6,6 +6,12 @@ categories: [deep-learning]
 tags: [optimization, mathematics, generative-ai]
 ---
 
+Imagine training a neural network with millions of parameters. How does it actually "learn"? The answer lies in optimization — the mathematical engine that drives every deep learning model. Without optimization techniques, our neural networks would be nothing more than complex functions with no way to improve.
+
+In this article, we'll explore the fundamental optimization methods that power modern machine learning, from basic gradient descent to the sophisticated Adam optimizer.
+
+## What is Optimization?
+
 Optimization refers to the process of finding the best parameters for a model to minimize (or maximize) some objective function, typically the **loss function** in machine learning. The most commonly used optimization techniques in machine learning involve **gradient-based** methods like **Gradient Descent**.
 
 ## 1.4.1 Gradient Descent

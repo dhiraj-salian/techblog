@@ -6,7 +6,9 @@ categories: [deep-learning]
 tags: [rag, llm, nlp, retrieval, generative-ai]
 ---
 
-**Retrieval-Augmented Generation (RAG)** is a method that enhances generative models by incorporating retrieval mechanisms. It allows a model to retrieve relevant documents or information from a large external database or corpus and use this information as part of the generation process. This hybrid approach enables the model to generate more accurate, grounded, and factual responses by directly accessing external knowledge.
+Picture this: You ask an AI about today's stock prices, and it confidently invents numbers that never existed. This is the "hallucination problem" — and **Retrieval-Augmented Generation (RAG)** is the solution.
+
+RAG enhances generative models by incorporating retrieval mechanisms. Instead of relying solely on what the model learned during training, RAG allows the model to retrieve relevant documents or information from a large external database or corpus in real-time and use this information as part of the generation process. This hybrid approach enables the model to generate more accurate, grounded, and factual responses by directly accessing external knowledge.
 
 ## **7.1 Why Use RAG?**
 
