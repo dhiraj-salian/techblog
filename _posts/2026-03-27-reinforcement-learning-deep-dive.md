@@ -12,7 +12,7 @@ tags:
   - PPO
   - GRPO
   - Agentic AI
-  - 2026
+  - "2026"
 ---
 
 # Reinforcement Learning: From Basics to 2026 Advances
