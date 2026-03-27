@@ -6,6 +6,29 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Transform ```mermaid code blocks to mermaid-compatible divs
+    const codeBlocks = document.querySelectorAll('pre code.language-mermaid, code.language-mermaid');
+    codeBlocks.forEach(function(block) {
+      const pre = block.parentElement;
+      const content = block.textContent.trim();
+      const div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = content;
+      pre.parentElement.replaceChild(div, pre);
+    });
+    
+    // Also check for pre code blocks without language class but with mermaid content
+    document.querySelectorAll('pre code').forEach(function(block) {
+      const text = block.textContent.trim();
+      if (text.startsWith('flowchart') || text.startsWith('graph') || text.startsWith('sequenceDiagram') || text.startsWith('classDiagram')) {
+        const pre = block.parentElement;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = text;
+        pre.parentElement.replaceChild(div, pre);
+      }
+    });
+    
     mermaid.initialize({
       startOnLoad: true,
       theme: 'default',
