@@ -6,7 +6,6 @@ categories: [research]
 tags: [research, papers, machine-learning, deep-learning, nlp, cv]
 ---
 
-# Research Paper Summaries: AI & Machine Learning Breakthroughs
 
 The best AI engineers don't just use models — they understand where they came from. Staying current with research is how you go from "using ChatGPT" to "building the next big thing." This post summarizes breakthrough papers that shaped modern AI: Attention is All You Need, BERT, GPT, and more.
 

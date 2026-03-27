@@ -6,7 +6,6 @@ categories: [machine-learning]
 tags: [machine-learning, evaluation, validation, model-selection, cross-validation]
 ---
 
-# Advanced Model Evaluation & Validation Techniques
 
 Building a model is easy. Building a model that actually works in the real world? That's hard. A model with 99% training accuracy means nothing if it fails on new data. This post covers advanced evaluation techniques: cross-validation, precision/recall/F1, ROC curves, confusion matrices, and how to detect overfitting before it kills your production system.
 

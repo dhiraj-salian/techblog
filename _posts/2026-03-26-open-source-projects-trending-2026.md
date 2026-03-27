@@ -9,7 +9,6 @@ description: "A curated look at the open source projects that are reshaping deve
 author: Dhiraj Salian
 ---
 
-# Open Source Projects Dominating Tech in 2026
 
 Every year, hundreds of new open-source tools launch. Most die. A few become essential. This post covers the projects actually changing how we build software in 2026: AI agents, development frameworks, and the tools every developer should know.
 

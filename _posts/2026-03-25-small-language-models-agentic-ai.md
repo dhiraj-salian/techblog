@@ -9,7 +9,6 @@ description: "Exploring why smaller language models are becoming the backbone of
 author: Dhiraj Salian
 ---
 
-# Small Language Models: The Future of Agentic AI
 
 > The biggest shift in AI isn't about building bigger models—it's about building the right brain for the job.
 

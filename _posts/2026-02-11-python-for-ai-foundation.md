@@ -6,7 +6,6 @@ categories: [python-programming]
 tags: [python, programming, ai, machine-learning, foundations]
 ---
 
-# Python for AI: Building Your Foundation
 
 Python is the language behind most AI systems today — from ChatGPT to self-driving cars. Before you dive into neural networks and transformers, you need to master the fundamentals. This post covers the essential Python concepts for AI: data types, control flow, functions, NumPy, and Pandas.
 

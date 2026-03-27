@@ -6,7 +6,6 @@ categories: [projects]
 tags: [projects, tutorials, machine-learning, deep-learning, portfolio]
 ---
 
-# Projects & Tutorials: Build Real AI Applications
 
 You can read about neural networks for hours, but nothing beats building one yourself. Theory only gets you so far — real mastery comes from building actual applications. This post covers hands-on projects that will strengthen your AI skills: image classifiers, chatbots, recommendation systems, and more.
 

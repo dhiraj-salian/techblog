@@ -6,7 +6,6 @@ categories: [projects]
 tags: [machine-learning, pipeline, mlops, projects, tutorial, python, scikit-learn]
 ---
 
-# Building Your First End-to-End ML Pipeline
 
 A model that works in a Jupyter notebook is useless in production. This post walks you through building a complete ML pipeline: data collection, preprocessing, feature engineering, model training, and deployment. By the end, you'll have a system that takes raw data and outputs predictions — automatically.
 
