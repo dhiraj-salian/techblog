@@ -44,25 +44,23 @@ At its heart, RL involves four main components:
 3. **Actions**: The decisions the agent can make
 4. **Rewards**: Feedback from the environment (positive or negative)
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    ENVIRONMENT                          │
-│  ┌─────────────────────────────────────────────────┐   │
-│  │                  STATE (s)                      │   │
-│  │  ┌─────────────────────────────────────────┐    │   │
-│  │  │           OBSERVATIONS                  │    │   │
-│  │  └─────────────────────────────────────────┘    │   │
-│  └─────────────────────────────────────────────────┘   │
-│                          ↑                              │
-│                    REWARD (r)                           │
-│                          ↑                              │
-│  ┌─────────────────────────────────────────────────┐   │
-│  │                    AGENT                        │   │
-│  │                                                 │   │
-│  │    ACTION (a) ───────────────────────────→     │   │
-│  │    Policy π(a|s) = P(a|s)                     │   │
-│  └─────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph Environment["Environment"]
+        State["State (s)<br/>Observations"]
+    end
+    
+    subgraph Agent["Agent"]
+        Policy["Policy π(a|s)<br/>P(a|s)"]
+        Action["Action (a)"]
+    end
+    
+    Agent -->|Action| Environment
+    Environment -->|State/Observation| Agent
+    Environment -->|Reward (r)| Agent
+    
+    style Environment fill:#e1f5fe
+    style Agent fill:#e8f5e8
 ```
 
 ### Key Terminology
