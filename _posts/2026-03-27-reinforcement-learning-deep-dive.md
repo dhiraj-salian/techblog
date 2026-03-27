@@ -46,21 +46,18 @@ At its heart, RL involves four main components:
 
 ```mermaid
 flowchart TD
-    subgraph Environment["Environment"]
-        State["State (s)<br/>Observations"]
+    subgraph Env[Environment]
+        S[State s]
     end
     
-    subgraph Agent["Agent"]
-        Policy["Policy π(a|s)<br/>P(a|s)"]
-        Action["Action (a)"]
+    subgraph Ag[Agent]
+        P[Policy]
+        A[Action a]
     end
     
-    Agent -->|Action| Environment
-    Environment -->|State/Observation| Agent
-    Environment -->|Reward (r)| Agent
-    
-    style Environment fill:#e1f5fe
-    style Agent fill:#e8f5e8
+    Ag -->|Action| Env
+    Env -->|State| Ag
+    Env -->|Reward r| Ag
 ```
 
 ### Key Terminology
